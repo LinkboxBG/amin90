@@ -1,0 +1,305 @@
+@import "tailwindcss";
+
+/*
+  Дизайн система v2.0 — Погребална агенция АМИН
+  Източник на истина: brand/DESIGN_SYSTEM.md
+  Само бранд цветове: navy #141e3c, gold #baad7b, бяло #ffffff (+ функционални оттенъци).
+*/
+
+:root {
+  /* === NAVY (основен) === */
+  --navy-900: #0e1530;
+  --navy-800: #141e3c;
+  --navy-700: #1d2a4f;
+  --navy-600: #283a68;
+
+  /* === GOLD (акцент) === */
+  --gold-700: #8f8253;
+  --gold-600: #a89a64;
+  --gold-500: #baad7b;
+  --gold-400: #cabf93;
+  --gold-300: #ddd4b4;
+
+  /* === НЕУТРАЛНИ === */
+  --white: #ffffff;
+  --paper: #faf9f6;
+  --line: #e7e4dc;
+
+  /* === ТЕКСТ === */
+  --ink-900: #1b1b1d;
+  --ink-700: #353539;
+  --ink-500: #6b6b70;
+  --on-dark: #ffffff;
+  --on-dark-muted: #c3c8d4;
+
+  /* === СЕМАНТИЧНИ === */
+  --bg-base: var(--white);
+  --bg-alt: var(--paper);
+  --bg-inverse: var(--navy-800);
+  --bg-footer: var(--navy-900);
+
+  --text-primary: var(--ink-900);
+  --text-body: var(--ink-700);
+  --text-muted: var(--ink-500);
+
+  --accent: var(--gold-500);
+  --accent-hover: var(--gold-400);
+  --accent-text: var(--gold-700);
+
+  --border-subtle: var(--line);
+  --border-accent: var(--gold-500);
+
+  /* === РАЗМЕРИ === */
+  --container-max: 1200px;
+  --container-narrow: 760px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 3px rgba(20, 30, 60, 0.06);
+  --shadow-md: 0 8px 24px rgba(20, 30, 60, 0.08);
+  --shadow-lg: 0 20px 50px rgba(20, 30, 60, 0.12);
+
+  /* шрифтови променливи се подават от next/font в layout.tsx */
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-montserrat), system-ui, sans-serif;
+}
+
+/* === Tailwind v4 theme mapping (CSS-first, без tailwind.config.js) === */
+@theme inline {
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-navy-600: var(--navy-600);
+
+  --color-gold-700: var(--gold-700);
+  --color-gold-600: var(--gold-600);
+  --color-gold-500: var(--gold-500);
+  --color-gold-400: var(--gold-400);
+  --color-gold-300: var(--gold-300);
+
+  --color-paper: var(--paper);
+  --color-line: var(--line);
+
+  --color-ink-900: var(--ink-900);
+  --color-ink-700: var(--ink-700);
+  --color-ink-500: var(--ink-500);
+  --color-on-dark: var(--on-dark);
+  --color-on-dark-muted: var(--on-dark-muted);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+
+  --radius-pill: 999px;
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
+
+/* === БАЗОВИ === */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-body);
+  background: var(--bg-base);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.12;
+  word-break: break-word;
+  font-feature-settings: "lnum" 1;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background-color: var(--gold-500);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-500);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* === ТЪМНА СЕКЦИЯ (.ds) === */
+.ds {
+  background-color: var(--navy-800);
+  color: var(--on-dark);
+}
+.ds h1, .ds h2, .ds h3, .ds h4, .ds h5, .ds h6 {
+  color: #fff;
+}
+.ds .accent {
+  color: var(--gold-500);
+}
+
+/* === БРАНД MOTIFS === */
+.accent-rule {
+  border-left: 3px solid var(--gold-500);
+  padding-left: 1.5rem;
+}
+.gold-divider {
+  height: 1px;
+  background: var(--gold-300);
+  border: 0;
+  width: 64px;
+}
+
+/* eyebrow / надзаглавие */
+.eyebrow {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--gold-700);
+}
+.ds .eyebrow {
+  color: var(--gold-500);
+}
+
+/* === КОНТЕЙНЕР И РИТЪМ === */
+.container-page {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.container-narrow {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.section {
+  padding-block: clamp(4rem, 10vw, 8rem);
+}
+.section-tight {
+  padding-block: clamp(2.5rem, 6vw, 4rem);
+}
+.prose-measure {
+  max-width: 65ch;
+}
+
+/* === БУТОНИ (pill) === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0.9rem 2.2rem;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+}
+.btn-primary {
+  background: var(--gold-500);
+  color: var(--navy-800);
+}
+.btn-primary:hover {
+  background: var(--gold-400);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--gold-700);
+  border-color: var(--gold-500);
+}
+.btn-outline:hover {
+  background: var(--gold-500);
+  color: var(--navy-800);
+}
+.ds .btn-outline {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.ds .btn-outline:hover {
+  background: var(--gold-500);
+  color: var(--navy-800);
+  border-color: var(--gold-500);
+}
+
+/* === ДЕКОР (вместо снимки за v1) === */
+/* мек navy градиент с дискретен златен орнамент за hero/медийни блокове */
+.brand-canvas {
+  position: relative;
+  background:
+    radial-gradient(120% 120% at 100% 0%, rgba(186, 173, 123, 0.16), transparent 55%),
+    linear-gradient(160deg, var(--navy-700) 0%, var(--navy-800) 45%, var(--navy-900) 100%);
+  overflow: hidden;
+}
+.brand-canvas::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+.brand-frame {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(120% 120% at 0% 0%, rgba(186, 173, 123, 0.1), transparent 60%),
+    var(--paper);
+}
+
+/* === АНИМАЦИЯ: лек fade-up === */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

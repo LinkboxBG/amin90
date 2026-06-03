@@ -1,0 +1,67 @@
+{
+  "name": "Погребална агенция АМИН",
+  "shortName": "АМИН",
+  "tagline": "Чест, достойнство и почтеност.",
+  "subtitle": "Траурна агенция",
+  "manager": "Ангел Кукуманов",
+  "experienceYears": 15,
+  "city": "Стамболийски",
+  "region": "област Пловдив",
+  "phones": ["+359878907150", "+359897389953"],
+  "phonesDisplay": ["0878 907 150", "0897 389 953"],
+  "primaryPhone": "+359878907150",
+  "primaryPhoneDisplay": "0878 907 150",
+  "hours": "Денонощно (24/7), включително събота, неделя и празнични дни",
+  "hoursShort": "Денонощно · 24/7",
+  "offices": [
+    {
+      "name": "Стамболийски",
+      "street": "ул. Клокотница 1",
+      "postal": "4210",
+      "city": "Стамболийски",
+      "phoneDisplay": "0878 907 150",
+      "phone": "+359878907150",
+      "gmb": "https://share.google/RF798LTdIUbEXyabP",
+      "primary": true
+    },
+    {
+      "name": "Цалапица",
+      "street": "пл. Демокрация 9",
+      "postal": "4218",
+      "city": "Цалапица",
+      "phoneDisplay": "0878 907 150",
+      "phone": "+359878907150",
+      "gmb": "https://share.google/qEKEQwFLef5v2rEjZ",
+      "primary": false
+    },
+    {
+      "name": "Кричим",
+      "street": "ул. Цар Иван Асен II 5",
+      "postal": "4220",
+      "city": "Кричим",
+      "phoneDisplay": "0878 907 150",
+      "phone": "+359878907150",
+      "gmb": "https://share.google/9EccHxG5StaO7nXYu",
+      "primary": false
+    },
+    {
+      "name": "Огняново",
+      "street": "ул. Христо Ботев 43",
+      "postal": "4417",
+      "city": "Огняново",
+      "phoneDisplay": "0878 907 150",
+      "phone": "+359878907150",
+      "gmb": "https://share.google/K3X2Y8Gin8LfTGJu8",
+      "primary": false
+    }
+  ],
+  "social": {
+    "facebook": "https://www.facebook.com/p/Траурна-агенция-Амин-100063528752773/"
+  },
+  "credits": "Изработка: Linkbox.BG",
+  "_todo": [
+    "Потвърди точните адреси на офисите с клиента (клиентът спомена, че точният адрес ще дойде във Viber).",
+    "Потвърди втория телефон 0897 389 953 (взет от текстовете; основният 0878 907 150 е потвърден).",
+    "Снимки на офисите (Стамболийски, Цалапица) се добавят, когато клиентът ги изпрати."
+  ]
+}

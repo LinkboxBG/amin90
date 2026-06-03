@@ -1,0 +1,28 @@
+{
+  "name": "amin90",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Уебсайт на Погребална агенция АМИН (amin90.com)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^16.2.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "^22.15.3",
+    "@types/react": "19.2.3",
+    "@types/react-dom": "19.2.3",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
