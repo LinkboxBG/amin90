@@ -25,6 +25,7 @@ const HOME_SERVICES = [
     title: "Кремация",
     text: "Съдействие при кремация, документи и транспорт до крематориум в Пловдив.",
     href: "/kremaciya",
+    imageId: "kremaciya-01",
   },
   {
     title: "Транспорт на покойник",
@@ -36,6 +37,7 @@ const HOME_SERVICES = [
     title: "Денонощна агенция",
     text: "24/7 насоки и организация при спешен случай.",
     href: "/denonoshtna-pogrebalna-agenciya",
+    imageId: "denonoshtna-agenciya-01",
   },
   {
     title: "Траурни стоки и венци",

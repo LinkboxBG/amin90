@@ -139,6 +139,14 @@ export const pageVisuals: Record<string, PageVisualConfig> = {
   },
 
   "/kremaciya": {
+    before: [
+      {
+        kind: "trust",
+        eyebrow: "Кремация",
+        title: "Съдействие при кремация",
+        imageId: "kremaciya-01",
+      },
+    ],
     after: [
       {
         kind: "gallery",
@@ -204,7 +212,7 @@ export const pageVisuals: Record<string, PageVisualConfig> = {
       {
         kind: "trust",
         title: "Денонощно съдействие при спешен случай",
-        imageId: "organizatsiya-pogrebenie-04",
+        imageId: "denonoshtna-agenciya-01",
       },
     ],
   },

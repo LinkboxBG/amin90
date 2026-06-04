@@ -6,8 +6,8 @@
  * / pageVisuals modules built on top of it) instead of hardcoding paths, so the
  * denylist below can guarantee sensitive photos never reach the public HTML.
  *
- * Files live in /public/images/<id>.jpg and are synced by
- * scripts/copy-client-images.mjs. Original JPGs are never modified here.
+ * Files live in /public/images/<id>.{jpg|png} and are synced by
+ * scripts/copy-client-images.mjs (JPGs) or added manually (e.g. branded PNGs).
  */
 
 export type ImageCategory =
@@ -51,8 +51,11 @@ const DO_NOT_USE_NOTE =
   "Contains personal names/dates/photos. Do not use publicly unless manually edited and approved.";
 
 /** Helper to keep entries terse while deriving src from id. */
-function img(entry: Omit<SiteImage, "src">): SiteImage {
-  return { ...entry, src: `/images/${entry.id}.jpg` };
+function img(
+  entry: Omit<SiteImage, "src"> & { ext?: "jpg" | "png" },
+): SiteImage {
+  const { ext = "jpg", ...rest } = entry;
+  return { ...rest, src: `/images/${rest.id}.${ext}` };
 }
 
 /**
@@ -220,6 +223,26 @@ export const siteImages: Record<string, SiteImage> = {
       "/denonoshtna-pogrebalna-agenciya",
     ],
     aspect: "landscape",
+  }),
+  "kremaciya-01": img({
+    id: "kremaciya-01",
+    alt: "Кремация — урна, цветя и поклонение в ритуална зала",
+    title: "Кремация",
+    category: "funeral-service",
+    usage: "hero",
+    pages: ["/", "/kremaciya"],
+    aspect: "landscape",
+    ext: "png",
+  }),
+  "denonoshtna-agenciya-01": img({
+    id: "denonoshtna-agenciya-01",
+    alt: "АМИН — денонощна траурна агенция +24/7",
+    title: "Денонощна агенция",
+    category: "trust",
+    usage: "hero",
+    pages: ["/", "/denonoshtna-pogrebalna-agenciya"],
+    aspect: "landscape",
+    ext: "png",
   }),
 
   // === Венци ===
