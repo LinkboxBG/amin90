@@ -17,6 +17,7 @@ export function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [desktopMenu, setDesktopMenu] = useState<string | null>(null);
   /** Avoid active-link class mismatch between SSR and first client paint (hydration). */
   const [hydrated, setHydrated] = useState(false);
 
@@ -24,12 +25,18 @@ export function Header() {
     setHydrated(true);
   }, []);
 
+  useEffect(() => {
+    setMobileOpen(false);
+    setOpenDropdown(null);
+    setDesktopMenu(null);
+  }, [pathname]);
+
   function linkActive(href: string) {
     return hydrated && isActive(pathname, href);
   }
 
   return (
-    <header className="ds sticky top-0 z-50 border-b border-gold-500/40 bg-navy-800/95 backdrop-blur supports-[backdrop-filter]:bg-navy-800/85">
+    <header className="ds sticky top-0 z-50 overflow-visible border-b border-gold-500/40 bg-navy-800/95 backdrop-blur supports-[backdrop-filter]:bg-navy-800/85">
       <div className="mx-auto grid h-16 w-full max-w-[1440px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 px-[var(--gutter)] md:h-[4.5rem] lg:gap-3">
         {/* Лого */}
         <Link
@@ -43,34 +50,70 @@ export function Header() {
 
         {/* Десктоп навигация */}
         <nav
-          className="hidden min-w-0 justify-self-stretch overflow-x-auto overflow-y-hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:block [&::-webkit-scrollbar]:hidden"
+          className="hidden min-w-0 justify-self-stretch lg:block lg:overflow-visible"
           aria-label="Основна навигация"
         >
-          <div className="flex w-max flex-nowrap items-center gap-0.5 py-1 pr-2">
+          <div className="flex w-max max-w-full flex-nowrap items-center gap-0.5 py-1 pr-2">
           {navigation.map((item) =>
             item.children ? (
-              <div key={item.href} className="group relative shrink-0">
-                <Link
-                  href={item.href}
-                  className={`flex items-center gap-0.5 whitespace-nowrap rounded-md px-2 py-2 text-xs font-semibold transition-colors hover:text-gold-400 xl:gap-1 xl:px-2.5 xl:text-sm ${
-                    linkActive(item.href) ? "text-gold-400" : "text-on-dark"
+              <div
+                key={item.href}
+                className="relative shrink-0"
+                onMouseEnter={() => setDesktopMenu(item.href)}
+                onMouseLeave={() => setDesktopMenu(null)}
+              >
+                <div className="flex items-center">
+                  <Link
+                    href={item.href}
+                    className={`whitespace-nowrap rounded-l-md px-2 py-2 text-xs font-semibold transition-colors hover:text-gold-400 xl:px-2.5 xl:text-sm ${
+                      linkActive(item.href) ? "text-gold-400" : "text-on-dark"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                  <button
+                    type="button"
+                    aria-label={`Подменю: ${item.label}`}
+                    aria-expanded={desktopMenu === item.href}
+                    aria-haspopup="true"
+                    onClick={() =>
+                      setDesktopMenu((v) => (v === item.href ? null : item.href))
+                    }
+                    className={`inline-flex items-center rounded-r-md py-2 pr-2 pl-0.5 text-on-dark transition-colors hover:text-gold-400 xl:pr-2.5 ${
+                      linkActive(item.href) ? "text-gold-400" : ""
+                    }`}
+                  >
+                    <ChevronDownIcon
+                      className={`size-3.5 shrink-0 transition-transform xl:size-4 ${
+                        desktopMenu === item.href ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                </div>
+                <div
+                  className={`absolute left-0 top-full z-[70] min-w-60 pt-1 transition-opacity duration-150 ${
+                    desktopMenu === item.href
+                      ? "pointer-events-auto visible opacity-100"
+                      : "pointer-events-none invisible opacity-0"
                   }`}
                 >
-                  {item.label}
-                  <ChevronDownIcon className="size-3.5 shrink-0 xl:size-4" />
-                </Link>
-                <div className="invisible absolute left-0 top-full min-w-60 translate-y-1 rounded-lg border border-gold-500/30 bg-navy-900 p-2 opacity-0 shadow-lg transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
-                  {item.children.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      className={`block rounded-md px-3 py-2 text-sm transition-colors hover:bg-navy-700 hover:text-gold-400 ${
-                        linkActive(child.href) ? "text-gold-400" : "text-on-dark-muted"
-                      }`}
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
+                  <div
+                    className="rounded-lg border border-gold-500/30 bg-navy-900 p-2 shadow-lg"
+                    role="menu"
+                  >
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.href}
+                        href={child.href}
+                        role="menuitem"
+                        className={`block rounded-md px-3 py-2 text-sm transition-colors hover:bg-navy-700 hover:text-gold-400 ${
+                          linkActive(child.href) ? "text-gold-400" : "text-on-dark-muted"
+                        }`}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             ) : (
@@ -148,19 +191,28 @@ export function Header() {
                 {navigation.map((item) =>
                   item.children ? (
                     <li key={item.href}>
-                      <button
-                        type="button"
-                        onClick={() =>
-                          setOpenDropdown((v) => (v === item.href ? null : item.href))
-                        }
-                        aria-expanded={openDropdown === item.href}
-                        className="flex w-full items-center justify-between rounded-md px-3 py-3 text-lg font-semibold text-on-dark"
-                      >
-                        {item.label}
-                        <ChevronDownIcon
-                          className={`size-5 transition-transform ${openDropdown === item.href ? "rotate-180" : ""}`}
-                        />
-                      </button>
+                      <div className="flex items-stretch">
+                        <Link
+                          href={item.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="flex flex-1 items-center rounded-l-md px-3 py-3 text-lg font-semibold text-on-dark"
+                        >
+                          {item.label}
+                        </Link>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setOpenDropdown((v) => (v === item.href ? null : item.href))
+                          }
+                          aria-label={`Подменю: ${item.label}`}
+                          aria-expanded={openDropdown === item.href}
+                          className="inline-flex items-center rounded-r-md px-3 py-3 text-on-dark"
+                        >
+                          <ChevronDownIcon
+                            className={`size-5 transition-transform ${openDropdown === item.href ? "rotate-180" : ""}`}
+                          />
+                        </button>
+                      </div>
                       {openDropdown === item.href && (
                         <ul className="mb-2 ml-3 space-y-1 border-l border-gold-500/30 pl-3">
                           {item.children.map((child) => (
