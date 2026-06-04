@@ -1,14 +1,9 @@
-import type { Metadata } from "next";
-import { transport } from "@/content/pages/transport-na-pokoinik";
-import { buildMetadata } from "@/lib/seo";
-import ServicePageView from "@/components/sections/ServicePageView";
+import { transport_na_pokoinik } from "@/content/pages/transport-na-pokoinik";
+import { pageMetadata } from "@/lib/page-metadata";
+import MarketingPageView from "@/components/sections/MarketingPageView";
 
-export const metadata: Metadata = buildMetadata({
-  title: transport.metaTitle,
-  description: transport.metaDescription,
-  path: transport.slug,
-});
+export const metadata = pageMetadata(transport_na_pokoinik);
 
 export default function Page() {
-  return <ServicePageView page={transport} />;
+  return <MarketingPageView page={transport_na_pokoinik} />;
 }

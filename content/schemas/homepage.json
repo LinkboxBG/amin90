@@ -1,0 +1,140 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "LocalBusiness",
+        "FuneralHome"
+      ],
+      "@id": "https://amin90.com/#organization",
+      "name": "Погребална агенция АМИН",
+      "alternateName": [
+        "Траурна агенция АМИН",
+        "АМИН 90"
+      ],
+      "url": "https://amin90.com/",
+      "telephone": "+359878907150",
+      "areaServed": [
+        "Стамболийски",
+        "Пловдив",
+        "Цалапица",
+        "Кричим",
+        "Огняново",
+        "България"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Стамболийски",
+        "addressCountry": "BG"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "description": "Погребална агенция „АМИН“ предлага денонощно съдействие при погребение, кремация, транспорт на покойник, документи, траурни стоки, венци и паметници в Стамболийски, Пловдив и региона."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://amin90.com/#website",
+      "url": "https://amin90.com/",
+      "name": "Погребална агенция АМИН",
+      "publisher": {
+        "@id": "https://amin90.com/#organization"
+      },
+      "inLanguage": "bg-BG"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://amin90.com/#webpage",
+      "url": "https://amin90.com/",
+      "name": "Погребална агенция АМИН | Стамболийски, Пловдив и региона",
+      "description": "Погребална агенция „АМИН“ предлага денонощно съдействие при погребение, кремация, транспорт, траурни стоки и паметници в Стамболийски, Пловдив и региона.",
+      "isPartOf": {
+        "@id": "https://amin90.com/#website"
+      },
+      "about": {
+        "@id": "https://amin90.com/#organization"
+      },
+      "inLanguage": "bg-BG"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://amin90.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Работите ли денонощно?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Погребална агенция „АМИН“ работи 24 часа в денонощието, включително събота, неделя и празнични дни."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Къде е централният офис на агенцията?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Централният офис е в гр. Стамболийски. Обслужваме също Пловдив, Цалапица, Кричим, Огняново и близките населени места."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Обслужвате ли Пловдив и региона?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Агенцията предлага съдействие за Пловдив и региона. Формулираме услугата като „погребална агенция за Пловдив и региона“, за да бъде ясно, че централният офис е в Стамболийски."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Предлагате ли кремация?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Съдействаме при организация на кремация, транспорт, документи и последващи стъпки. Кремацията се извършва в Пловдив като най-близък крематориум."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Може ли да съдействате с документи?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Агенцията съдейства с административните стъпки според конкретния случай — смъртен акт, документи за погребение, документи за кремация и други необходими действия."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Предлагате ли траурни стоки и венци?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Предлагаме ковчези, кръстове, некролози, свещи, венци, цветя и други траурни изделия. Поръчката може да се уточни на място или по телефона."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://amin90.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://amin90.com/"
+        }
+      ]
+    }
+  ]
+}

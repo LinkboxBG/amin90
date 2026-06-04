@@ -1,14 +1,9 @@
-import type { Metadata } from "next";
 import { pogrebenie } from "@/content/pages/pogrebenie";
-import { buildMetadata } from "@/lib/seo";
-import ServicePageView from "@/components/sections/ServicePageView";
+import { pageMetadata } from "@/lib/page-metadata";
+import MarketingPageView from "@/components/sections/MarketingPageView";
 
-export const metadata: Metadata = buildMetadata({
-  title: pogrebenie.metaTitle,
-  description: pogrebenie.metaDescription,
-  path: pogrebenie.slug,
-});
+export const metadata = pageMetadata(pogrebenie);
 
 export default function Page() {
-  return <ServicePageView page={pogrebenie} />;
+  return <MarketingPageView page={pogrebenie} />;
 }

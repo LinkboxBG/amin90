@@ -1,14 +1,9 @@
-import type { Metadata } from "next";
-import { denonoshtna } from "@/content/pages/denonoshtna-pogrebalna-agenciya";
-import { buildMetadata } from "@/lib/seo";
-import ServicePageView from "@/components/sections/ServicePageView";
+import { denonoshtna_pogrebalna_agenciya } from "@/content/pages/denonoshtna-pogrebalna-agenciya";
+import { pageMetadata } from "@/lib/page-metadata";
+import UrgentServiceView from "@/components/sections/UrgentServiceView";
 
-export const metadata: Metadata = buildMetadata({
-  title: denonoshtna.metaTitle,
-  description: denonoshtna.metaDescription,
-  path: denonoshtna.slug,
-});
+export const metadata = pageMetadata(denonoshtna_pogrebalna_agenciya);
 
 export default function Page() {
-  return <ServicePageView page={denonoshtna} />;
+  return <UrgentServiceView page={denonoshtna_pogrebalna_agenciya} />;
 }

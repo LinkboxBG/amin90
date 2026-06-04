@@ -8,6 +8,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE_URL}${route === "/" ? "" : route}`,
     lastModified: now,
     changeFrequency: route === "/" ? "weekly" : "monthly",
-    priority: route === "/" ? 1 : 0.8,
+    priority:
+      route === "/"
+        ? 1
+        : route.startsWith("/pogrebalna-agenciya-")
+          ? 0.7
+          : route === "/ceni" || route === "/kontakti"
+            ? 0.9
+            : 0.8,
   }));
 }

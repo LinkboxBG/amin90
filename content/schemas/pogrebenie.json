@@ -1,0 +1,173 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://amin90.com/pogrebenie#service",
+      "name": "Организация на погребение",
+      "description": "Пълна организация на погребение от погребална агенция АМИН — документи, транспорт, санитарна подготовка, ритуална зала, свещеник, венци, кетъринг и денонощно съдействие.",
+      "serviceType": "Организация на погребение",
+      "provider": {
+        "@type": "FuneralHome",
+        "@id": "https://amin90.com/#funeralhome",
+        "name": "Погребална агенция АМИН",
+        "alternateName": [
+          "Траурна агенция АМИН",
+          "АМИН 90"
+        ],
+        "url": "https://amin90.com/",
+        "telephone": "+359878907150",
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Стамболийски"
+          },
+          {
+            "@type": "Place",
+            "name": "Пловдив"
+          },
+          {
+            "@type": "Place",
+            "name": "Цалапица"
+          },
+          {
+            "@type": "Place",
+            "name": "Кричим"
+          },
+          {
+            "@type": "Place",
+            "name": "Огняново"
+          },
+          {
+            "@type": "Country",
+            "name": "България"
+          }
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Стамболийски"
+        },
+        {
+          "@type": "Place",
+          "name": "Пловдив и региона"
+        },
+        {
+          "@type": "Country",
+          "name": "България"
+        }
+      ],
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+359878907150",
+          "contactType": "customer service",
+          "availableLanguage": "Bulgarian",
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        }
+      },
+      "url": "https://amin90.com/pogrebenie"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://amin90.com/pogrebenie#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Какво трябва да направим при смъртен случай?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Първо се обадете на денонощния телефон на погребална агенция АМИН: +359 87 8907 150. Екипът ще даде конкретни насоки според това къде е настъпила смъртта и какви действия са необходими."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какво включва организацията на погребение?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Организацията може да включва посещение на адрес, транспорт на покойника, санитарна подготовка, полагане в ковчег, документи, ритуална зала, свещеник, венци, траурни стоки, кетъринг и координация на ритуала."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Може ли погребението да се организира бързо?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "При смъртен случай се действа според законовите и организационни условия. В много случаи организацията започва веднага след обаждането, но конкретният срок зависи от документите, населеното място, гробищния парк и избрания ритуал."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Съдействате ли със свещеник и документи?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Траурна агенция АМИН може да съдейства както с документи за погребение, така и с контакт със свещеник и подготовка на ритуала според желанието на близките."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Обслужвате ли различни вероизповедания?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Агенцията съдейства при православни, католически, граждански и други ритуали, според желанието на семейството и конкретната ситуация."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Може ли погребението да се организира на адрес на клиента?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Погребението може да бъде организирано в офис на фирмата или на посочен от клиента адрес. При нужда екипът може да посети адрес и да даде насоки на място."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Предлагате ли венци и траурни стоки?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Погребална агенция АМИН предлага траурни стоки, ковчези, кръстове, венци, цветя, свещи, некролози и други изделия, необходими за организацията на погребение."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://amin90.com/pogrebenie#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://amin90.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Траурни услуги",
+          "item": "https://amin90.com/traurni-uslugi"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Организация на погребение",
+          "item": "https://amin90.com/pogrebenie"
+        }
+      ]
+    }
+  ]
+}

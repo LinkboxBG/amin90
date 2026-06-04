@@ -1,14 +1,9 @@
-import type { Metadata } from "next";
-import { ketaringPomen } from "@/content/pages/ketaring-pomen";
-import { buildMetadata } from "@/lib/seo";
-import ServicePageView from "@/components/sections/ServicePageView";
+import { ketaring_pomen } from "@/content/pages/ketaring-pomen";
+import { pageMetadata } from "@/lib/page-metadata";
+import MarketingPageView from "@/components/sections/MarketingPageView";
 
-export const metadata: Metadata = buildMetadata({
-  title: ketaringPomen.metaTitle,
-  description: ketaringPomen.metaDescription,
-  path: ketaringPomen.slug,
-});
+export const metadata = pageMetadata(ketaring_pomen);
 
 export default function Page() {
-  return <ServicePageView page={ketaringPomen} />;
+  return <MarketingPageView page={ketaring_pomen} />;
 }

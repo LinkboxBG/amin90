@@ -1,32 +1,55 @@
-import type { ServicePage } from "@/content/types";
-import { traurniUslugi } from "@/content/pages/traurni-uslugi";
-import { denonoshtna } from "@/content/pages/denonoshtna-pogrebalna-agenciya";
+import type { MarketingPageContent } from "@/content/types";
+import { home } from "@/content/pages/home";
+import { traurni_uslugi } from "@/content/pages/traurni-uslugi";
+import { denonoshtna_pogrebalna_agenciya } from "@/content/pages/denonoshtna-pogrebalna-agenciya";
 import { pogrebenie } from "@/content/pages/pogrebenie";
 import { kremaciya } from "@/content/pages/kremaciya";
-import { transport } from "@/content/pages/transport-na-pokoinik";
-import { ketaringPomen } from "@/content/pages/ketaring-pomen";
+import { transport_na_pokoinik } from "@/content/pages/transport-na-pokoinik";
+import { dokumenti_za_pogrebenie } from "@/content/pages/dokumenti-za-pogrebenie";
+import { ketaring_pomen } from "@/content/pages/ketaring-pomen";
+import { traurni_stoki } from "@/content/pages/traurni-stoki";
+import { traurni_venci } from "@/content/pages/traurni-venci";
 import { pametnitsi } from "@/content/pages/pametnitsi";
-import { traurniStoki } from "@/content/pages/traurni-stoki";
+import { ceni } from "@/content/pages/ceni";
+import { za_nas } from "@/content/pages/za-nas";
+import { kontakti } from "@/content/pages/kontakti";
+import { lokacii } from "@/content/pages/lokacii";
+import { pogrebalna_agenciya_stamboliyski } from "@/content/pages/pogrebalna-agenciya-stamboliyski";
+import { pogrebalna_agenciya_plovdiv } from "@/content/pages/pogrebalna-agenciya-plovdiv";
+import { pogrebalna_agenciya_tsalapitsa } from "@/content/pages/pogrebalna-agenciya-tsalapitsa";
+import { pogrebalna_agenciya_krichim } from "@/content/pages/pogrebalna-agenciya-krichim";
+import { pogrebalna_agenciya_ognyanovo } from "@/content/pages/pogrebalna-agenciya-ognyanovo";
 
-export const servicePages: ServicePage[] = [
-  traurniUslugi,
-  denonoshtna,
+export const marketingPages: MarketingPageContent[] = [
+  traurni_uslugi,
+  denonoshtna_pogrebalna_agenciya,
   pogrebenie,
   kremaciya,
-  transport,
-  ketaringPomen,
+  transport_na_pokoinik,
+  dokumenti_za_pogrebenie,
+  ketaring_pomen,
+  traurni_stoki,
+  traurni_venci,
   pametnitsi,
-  traurniStoki,
+  ceni,
+  za_nas,
+  kontakti,
+  lokacii,
+  pogrebalna_agenciya_stamboliyski,
+  pogrebalna_agenciya_plovdiv,
+  pogrebalna_agenciya_tsalapitsa,
+  pogrebalna_agenciya_krichim,
+  pogrebalna_agenciya_ognyanovo,
 ];
 
-export function getServicePage(slug: string): ServicePage | undefined {
+export function getMarketingPage(slug: string): MarketingPageContent | undefined {
   const normalized = slug.startsWith("/") ? slug : `/${slug}`;
-  return servicePages.find((p) => p.slug === normalized);
+  return marketingPages.find((p) => p.slug === normalized);
 }
 
-/** всички вътрешни маршрути за sitemap */
 export const allRoutes: string[] = [
   "/",
-  ...servicePages.map((p) => p.slug),
-  "/ceni",
+  ...marketingPages.map((p) => p.slug),
 ];
+
+export { home };

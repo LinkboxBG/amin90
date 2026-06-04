@@ -1,0 +1,147 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://amin90.com/pametnitsi#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://amin90.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Паметници и надгробни плочи",
+          "item": "https://amin90.com/pametnitsi"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://amin90.com/pametnitsi#itemlist",
+      "name": "Паметници и надгробни плочи",
+      "description": "Изработка на паметници и надгробни плочи от мрамор и гранит, стандартни модели, паметници с орнаменти и индивидуални поръчки.",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Product",
+            "name": "Стандартни надгробни паметници",
+            "description": "Стандартни паметници в различни размери, подходящи за изчистено и достъпно оформление на гробно място.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Погребална агенция АМИН"
+            },
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "EUR",
+              "lowPrice": "45",
+              "highPrice": "178",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "name": "Паметници с модел и орнаменти",
+            "description": "Паметници с форма, декоративни елементи и възможност за персонализация според желанието на близките.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Погребална агенция АМИН"
+            },
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "EUR",
+              "lowPrice": "140",
+              "highPrice": "280",
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Product",
+            "name": "Индивидуални паметници по поръчка",
+            "description": "Индивидуална изработка на паметници с избор на материал, размер, надпис, снимка, гравюра и допълнителни елементи.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Погребална агенция АМИН"
+            },
+            "offers": {
+              "@type": "Offer",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "priceCurrency": "EUR",
+                "description": "Цената се определя според индивидуалната поръчка, материал, размер и допълнителни елементи."
+              },
+              "availability": "https://schema.org/InStock"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://amin90.com/pametnitsi#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Колко струва надгробен паметник?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Цената зависи от размера, материала, модела, надписите, снимката, допълнителните елементи и монтажа. Стандартните модели започват от по-нисък ценови диапазон, а паметниците с форма, орнаменти или индивидуална изработка се калкулират според конкретната поръчка."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "От какви материали изработвате паметници?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Изработваме паметници основно от мрамор и гранит. При избор можем да ви насочим според визия, устойчивост, бюджет и конкретно гробно място."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Може ли индивидуален проект?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Приемаме индивидуални поръчки с персонализация — снимка, надпис, гравюра, символи, декорация, форма и специфичен размер."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Колко време отнема изработката?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ориентировъчният срок за изработка е около 1 месец. Точният срок зависи от модела, материала, персонализацията и текущата натовареност."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Включен ли е монтажът в цената?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Монтажът не е включен автоматично в цената. Той се определя отделно според локацията, сложността, размера и състоянието на гробното място."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Могат ли моделите да се видят на място?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Паметниците и моделите могат да бъдат разгледани на място, според наличността и организацията към момента."
+          }
+        }
+      ]
+    }
+  ]
+}

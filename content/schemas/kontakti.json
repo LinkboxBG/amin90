@@ -1,0 +1,141 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://amin90.com/#organization",
+      "name": "Погребална агенция АМИН",
+      "alternateName": [
+        "Траурна агенция АМИН",
+        "АМИН 90"
+      ],
+      "url": "https://amin90.com/",
+      "telephone": "+359878907150",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+359878907150",
+          "contactType": "customer service",
+          "areaServed": "BG",
+          "availableLanguage": "bg"
+        }
+      ]
+    },
+    {
+      "@type": "FuneralHome",
+      "@id": "https://amin90.com/kontakti#funeralhome",
+      "name": "Погребална агенция АМИН",
+      "alternateName": "Траурна агенция АМИН",
+      "url": "https://amin90.com/kontakti",
+      "telephone": "+359878907150",
+      "priceRange": "€€",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Стамболийски"
+        },
+        {
+          "@type": "City",
+          "name": "Пловдив"
+        },
+        {
+          "@type": "Place",
+          "name": "Цалапица"
+        },
+        {
+          "@type": "City",
+          "name": "Кричим"
+        },
+        {
+          "@type": "Place",
+          "name": "Огняново"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "parentOrganization": {
+        "@id": "https://amin90.com/#organization"
+      }
+    },
+    {
+      "@type": "ContactPage",
+      "@id": "https://amin90.com/kontakti#contactpage",
+      "url": "https://amin90.com/kontakti",
+      "name": "Контакти с погребална агенция АМИН",
+      "description": "Денонощен телефон и контактна информация за погребална агенция АМИН.",
+      "mainEntity": {
+        "@id": "https://amin90.com/kontakti#funeralhome"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://amin90.com/kontakti#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Работите ли денонощно?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Погребална агенция АМИН работи денонощно, включително събота, неделя и празнични дни."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какъв е телефонът за връзка?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Денонощният телефон за връзка е +359 87 8907 150."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Къде се намира централният офис?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Централният офис на погребална агенция АМИН е в гр. Стамболийски."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Обслужвате ли Пловдив и региона?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Агенцията оказва съдействие за Пловдив, Стамболийски, Цалапица, Кричим, Огняново и близките населени места."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://amin90.com/kontakti#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://amin90.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Контакти",
+          "item": "https://amin90.com/kontakti"
+        }
+      ]
+    }
+  ]
+}

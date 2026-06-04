@@ -1,15 +1,9 @@
-import type { Metadata } from "next";
-import { traurniStoki } from "@/content/pages/traurni-stoki";
-import { buildMetadata } from "@/lib/seo";
-import ServicePageView from "@/components/sections/ServicePageView";
+import { traurni_stoki } from "@/content/pages/traurni-stoki";
+import { pageMetadata } from "@/lib/page-metadata";
+import MarketingPageView from "@/components/sections/MarketingPageView";
 
-export const metadata: Metadata = buildMetadata({
-  title: traurniStoki.metaTitle,
-  description: traurniStoki.metaDescription,
-  path: traurniStoki.slug,
-});
+export const metadata = pageMetadata(traurni_stoki);
 
-// TODO: добави снимки от client-files/images/Ковчези/ и client-files/images/венци/, когато са налични.
 export default function Page() {
-  return <ServicePageView page={traurniStoki} />;
+  return <MarketingPageView page={traurni_stoki} />;
 }

@@ -49,7 +49,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="bg" className={`${playfair.variable} ${montserrat.variable}`}>
+    <html
+      lang="bg"
+      className={`${playfair.variable} ${montserrat.variable}`}
+      data-scroll-behavior="smooth"
+    >
       <body>
         <a
           href="#main"

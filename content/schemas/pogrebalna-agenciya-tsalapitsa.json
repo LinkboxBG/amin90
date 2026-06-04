@@ -1,0 +1,135 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://amin90.com/pogrebalna-agenciya-tsalapitsa#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://amin90.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Локации",
+          "item": "https://amin90.com/lokacii"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Погребална агенция за Цалапица",
+          "item": "https://amin90.com/pogrebalna-agenciya-tsalapitsa"
+        }
+      ]
+    },
+    {
+      "@type": "FuneralHome",
+      "@id": "https://amin90.com/#funeralhome",
+      "name": "Погребална агенция АМИН",
+      "alternateName": "Траурна агенция АМИН",
+      "url": "https://amin90.com/",
+      "telephone": "+359878907150",
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Цалапица"
+        },
+        {
+          "@type": "Place",
+          "name": "Стамболийски"
+        },
+        {
+          "@type": "Place",
+          "name": "Пловдив и региона"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://amin90.com/pogrebalna-agenciya-tsalapitsa#service",
+      "name": "Погребална агенция за Цалапица",
+      "serviceType": "Погребални и траурни услуги",
+      "provider": {
+        "@id": "https://amin90.com/#funeralhome"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Цалапица и района"
+      },
+      "description": "Денонощно съдействие при погребение, кремация, транспорт на покойник, документи и траурни услуги за Цалапица и района."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://amin90.com/pogrebalna-agenciya-tsalapitsa#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Обслужвате ли Цалапица?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Погребална агенция АМИН съдейства при смъртен случай, организация на погребение, кремация, транспорт, документи и траурни стоки за Цалапица и района."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Има ли локация или офис в Цалапица?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "За страницата трябва да се използва потвърденият статус на локацията според GMB/Google Maps данните и финалната бизнес валидация. Ако локацията е кореспондентна точка, текстът не трябва да я представя като централен офис."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какви услуги предлагате за района?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Съдействаме с организация на погребение, кремация, транспорт на покойник, документи, санитарна подготовка, ритуална зала, свещеник, венци, траурни стоки, кетъринг и паметници."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Работите ли денонощно?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Траурна агенция АМИН работи денонощно, включително събота, неделя и празнични дни."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Може ли екип да съдейства на адрес?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "При необходимост може да се организира съдействие на посочен от близките адрес. Това се уточнява по телефона според случая и местоположението."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Може ли да помогнете с документи?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Агенцията съдейства с насоки и административни стъпки при документи за погребение, кремация, издаване на смъртен акт и транспорт на покойник според конкретния случай."
+          }
+        }
+      ]
+    }
+  ]
+}

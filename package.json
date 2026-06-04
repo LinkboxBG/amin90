@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "tsc --noEmit",
+    "import:v2": "node scripts/import-v2-content.mjs",
+    "import:images": "node scripts/copy-client-images.mjs"
   },
   "dependencies": {
     "next": "^16.2.6",

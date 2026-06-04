@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigation } from "@/content/navigation";
@@ -16,30 +16,48 @@ function isActive(pathname: string, href: string) {
 export function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  /** Avoid active-link class mismatch between SSR and first client paint (hydration). */
+  const [hydrated, setHydrated] = useState(false);
+
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+
+  function linkActive(href: string) {
+    return hydrated && isActive(pathname, href);
+  }
 
   return (
     <header className="ds sticky top-0 z-50 border-b border-gold-500/40 bg-navy-800/95 backdrop-blur supports-[backdrop-filter]:bg-navy-800/85">
-      <div className="container-page flex h-16 items-center justify-between gap-4 md:h-20">
+      <div className="mx-auto grid h-16 w-full max-w-[1440px] grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 px-[var(--gutter)] md:h-[4.5rem] lg:gap-3">
         {/* Лого */}
-        <Link href="/" aria-label="Погребална агенция АМИН — начало" className="flex items-center">
-          <Logo variant="on-dark" className="hidden h-11 w-auto md:block" />
-          <Logo variant="on-dark" wordmark className="block h-9 w-auto md:hidden" />
+        <Link
+          href="/"
+          aria-label="Погребална агенция АМИН — начало"
+          className="relative z-10 flex shrink-0 items-center bg-navy-800 pr-1"
+        >
+          <Logo variant="on-dark" className="hidden h-10 w-auto lg:block xl:h-11" />
+          <Logo variant="on-dark" wordmark className="block h-9 w-auto lg:hidden" />
         </Link>
 
         {/* Десктоп навигация */}
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Основна навигация">
+        <nav
+          className="hidden min-w-0 justify-self-stretch overflow-x-auto overflow-y-hidden [-ms-overflow-style:none] [scrollbar-width:none] lg:block [&::-webkit-scrollbar]:hidden"
+          aria-label="Основна навигация"
+        >
+          <div className="flex w-max flex-nowrap items-center gap-0.5 py-1 pr-2">
           {navigation.map((item) =>
             item.children ? (
-              <div key={item.href} className="group relative">
+              <div key={item.href} className="group relative shrink-0">
                 <Link
                   href={item.href}
-                  className={`flex items-center gap-1 rounded-md px-3 py-2 text-sm font-semibold transition-colors hover:text-gold-400 ${
-                    isActive(pathname, item.href) ? "text-gold-400" : "text-on-dark"
+                  className={`flex items-center gap-0.5 whitespace-nowrap rounded-md px-2 py-2 text-xs font-semibold transition-colors hover:text-gold-400 xl:gap-1 xl:px-2.5 xl:text-sm ${
+                    linkActive(item.href) ? "text-gold-400" : "text-on-dark"
                   }`}
                 >
                   {item.label}
-                  <ChevronDownIcon className="size-4 transition-transform group-hover:rotate-180" />
+                  <ChevronDownIcon className="size-3.5 shrink-0 xl:size-4" />
                 </Link>
                 <div className="invisible absolute left-0 top-full min-w-60 translate-y-1 rounded-lg border border-gold-500/30 bg-navy-900 p-2 opacity-0 shadow-lg transition-all group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
                   {item.children.map((child) => (
@@ -47,7 +65,7 @@ export function Header() {
                       key={child.href}
                       href={child.href}
                       className={`block rounded-md px-3 py-2 text-sm transition-colors hover:bg-navy-700 hover:text-gold-400 ${
-                        isActive(pathname, child.href) ? "text-gold-400" : "text-on-dark-muted"
+                        linkActive(child.href) ? "text-gold-400" : "text-on-dark-muted"
                       }`}
                     >
                       {child.label}
@@ -59,54 +77,53 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-md px-3 py-2 text-sm font-semibold transition-colors hover:text-gold-400 ${
-                  isActive(pathname, item.href) ? "text-gold-400" : "text-on-dark"
+                className={`shrink-0 whitespace-nowrap rounded-md px-2 py-2 text-xs font-semibold transition-colors hover:text-gold-400 xl:px-2.5 xl:text-sm ${
+                  linkActive(item.href) ? "text-gold-400" : "text-on-dark"
                 }`}
               >
                 {item.label}
               </Link>
             )
           )}
+          </div>
         </nav>
 
-        {/* Телефони + CTA (десктоп) */}
-        <div className="hidden items-center gap-3 lg:flex">
-          <div className="flex flex-col items-end leading-tight">
-            {site.phonesDisplay.map((p, i) => (
-              <a
-                key={p}
-                href={`tel:${site.phones[i]}`}
-                className="flex items-center gap-1.5 text-sm font-semibold text-on-dark transition-colors hover:text-gold-400"
-              >
-                <PhoneIcon className="size-3.5 text-gold-500" />
-                {p}
-              </a>
-            ))}
+        {/* Дясна колона: CTA (десктоп) / мобилни контроли */}
+        <div className="relative z-10 flex items-center justify-end gap-2 justify-self-end bg-navy-800 pl-1">
+          <div className="hidden items-center gap-2 lg:flex xl:gap-3">
+            <a
+              href={`tel:${site.primaryPhone}`}
+              className="hidden items-center gap-1.5 whitespace-nowrap text-sm font-semibold text-on-dark transition-colors hover:text-gold-400 xl:flex"
+            >
+              <PhoneIcon className="size-3.5 shrink-0 text-gold-500" />
+              {site.primaryPhoneDisplay}
+            </a>
+            <a
+              href={`tel:${site.primaryPhone}`}
+              className="btn btn-primary shrink-0 !min-h-10 !px-4 !py-2 text-sm xl:!min-h-11 xl:!px-5"
+            >
+              Обади се
+            </a>
           </div>
-          <a href={`tel:${site.primaryPhone}`} className="btn btn-primary !min-h-11 !px-5 !py-2 text-sm">
-            Обади се
-          </a>
-        </div>
-
-        {/* Мобилен бутон */}
-        <div className="flex items-center gap-2 lg:hidden">
-          <a
-            href={`tel:${site.primaryPhone}`}
-            className="btn btn-primary !min-h-10 !px-4 !py-2 text-sm"
-            aria-label={`Обади се на ${site.primaryPhoneDisplay}`}
-          >
-            <PhoneIcon className="size-4" />
-            <span className="hidden sm:inline">Обади се</span>
-          </a>
-          <button
-            type="button"
-            onClick={() => setMobileOpen(true)}
-            aria-label="Отвори меню"
-            aria-expanded={mobileOpen}
-            className="inline-flex size-10 items-center justify-center rounded-md text-on-dark"
-          >
-            <MenuIcon className="size-6" />
-          </button>
+          <div className="flex items-center gap-2 lg:hidden">
+            <a
+              href={`tel:${site.primaryPhone}`}
+              className="btn btn-primary !min-h-10 !px-4 !py-2 text-sm"
+              aria-label={`Обади се на ${site.primaryPhoneDisplay}`}
+            >
+              <PhoneIcon className="size-4" />
+              <span className="hidden sm:inline">Обади се</span>
+            </a>
+            <button
+              type="button"
+              onClick={() => setMobileOpen(true)}
+              aria-label="Отвори меню"
+              aria-expanded={mobileOpen}
+              className="inline-flex size-10 items-center justify-center rounded-md text-on-dark"
+            >
+              <MenuIcon className="size-6" />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -133,26 +150,19 @@ export function Header() {
                     <li key={item.href}>
                       <button
                         type="button"
-                        onClick={() => setServicesOpen((v) => !v)}
-                        aria-expanded={servicesOpen}
+                        onClick={() =>
+                          setOpenDropdown((v) => (v === item.href ? null : item.href))
+                        }
+                        aria-expanded={openDropdown === item.href}
                         className="flex w-full items-center justify-between rounded-md px-3 py-3 text-lg font-semibold text-on-dark"
                       >
                         {item.label}
                         <ChevronDownIcon
-                          className={`size-5 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                          className={`size-5 transition-transform ${openDropdown === item.href ? "rotate-180" : ""}`}
                         />
                       </button>
-                      {servicesOpen && (
+                      {openDropdown === item.href && (
                         <ul className="mb-2 ml-3 space-y-1 border-l border-gold-500/30 pl-3">
-                          <li>
-                            <Link
-                              href={item.href}
-                              onClick={() => setMobileOpen(false)}
-                              className="block rounded-md px-3 py-2 text-base text-gold-400"
-                            >
-                              Всички услуги
-                            </Link>
-                          </li>
                           {item.children.map((child) => (
                             <li key={child.href}>
                               <Link

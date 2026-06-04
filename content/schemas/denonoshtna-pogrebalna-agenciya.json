@@ -1,0 +1,122 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://amin90.com/denonoshtna-pogrebalna-agenciya#service",
+      "name": "Денонощна погребална агенция",
+      "serviceType": "Денонощно съдействие при смъртен случай",
+      "provider": {
+        "@type": "FuneralHome",
+        "name": "Погребална агенция АМИН",
+        "telephone": "+359878907150",
+        "areaServed": [
+          "Стамболийски",
+          "Пловдив",
+          "Цалапица",
+          "Кричим",
+          "Огняново",
+          "България"
+        ]
+      },
+      "description": "Погребална агенция „АМИН“ предлага денонощно съдействие при смъртен случай, включително организация на погребение, кремация, транспорт на покойник, документи и първи стъпки след настъпване на смърт.",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+359878907150",
+          "contactType": "customer support",
+          "availableLanguage": "bg"
+        },
+        "availableLanguage": "bg"
+      },
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "url": "https://amin90.com/denonoshtna-pogrebalna-agenciya"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://amin90.com/denonoshtna-pogrebalna-agenciya#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Какво да направим, ако смъртта настъпи през нощта?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Обадете се на денонощния телефон +359 87 8907 150. Погребална агенция „АМИН“ работи 24/7 и ще ви насочи какви са първите действия според конкретната ситуация."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Може ли екип да дойде на адрес?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, при необходимост може да се организира посещение на посочен от близките адрес. Това се уточнява по телефона според мястото, обстоятелствата и нужната помощ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Работите ли през събота, неделя и празници?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Траурна агенция „АМИН“ работи денонощно, включително събота, неделя и празнични дни."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какъв е първият документ, който е нужен?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Обикновено е необходим първичен медицински документ, след което се преминава към издаване на смъртен акт и останалите документи според случая. Точните стъпки зависят от това къде и при какви обстоятелства е настъпила смъртта."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Може ли да съдействате с транспорт на покойник?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Агенцията организира транспорт на покойник в региона, в цяла България и при необходимост — международен транспорт."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Може ли да организирате цялото погребение?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Погребална агенция „АМИН“ може да поеме цялостната организация — документи, транспорт, подготовка, ковчег, ритуална зала, свещеник, венци, траурни стоки, кетъринг и координация на ритуала."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://amin90.com/denonoshtna-pogrebalna-agenciya#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://amin90.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Денонощна погребална агенция",
+          "item": "https://amin90.com/denonoshtna-pogrebalna-agenciya"
+        }
+      ]
+    }
+  ]
+}

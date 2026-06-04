@@ -102,16 +102,16 @@ type MetaInput = {
 
 /** Унифицирана генерация на метаданни от съдържанието */
 export function buildMetadata({ title, description, path }: MetaInput): Metadata {
-  const url = path === "/" ? "/" : path;
+  const pathname = path === "/" ? "/" : path.replace(/\/$/, "");
+  const canonical = pathname === "/" ? `${SITE_URL}/` : `${SITE_URL}${pathname}`;
   return {
-    // metaTitle вече съдържа бранда — без template, за да няма дублиране
     title: { absolute: title },
     description,
-    alternates: { canonical: url },
+    alternates: { canonical },
     openGraph: {
       title,
       description,
-      url,
+      url: canonical,
       siteName: site.name,
       locale: "bg_BG",
       type: "website",

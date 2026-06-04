@@ -1,0 +1,158 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FuneralHome",
+      "@id": "https://amin90.com/pogrebalna-agenciya-stamboliyski#funeralhome",
+      "name": "Погребална агенция АМИН",
+      "alternateName": [
+        "Траурна агенция АМИН",
+        "АМИН 90"
+      ],
+      "url": "https://amin90.com/pogrebalna-agenciya-stamboliyski",
+      "telephone": "+359878907150",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Стамболийски",
+        "addressCountry": "BG"
+      },
+      "areaServed": [
+        "Стамболийски",
+        "Пловдив",
+        "Цалапица",
+        "Кричим",
+        "Огняново",
+        "Пловдивска област",
+        "България"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Погребални и траурни услуги",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Организация на погребение"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Кремация"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Транспорт на покойник"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Съдействие с документи за погребение"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Изработка на паметници и надгробни плочи"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://amin90.com/pogrebalna-agenciya-stamboliyski#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Къде се намира централният офис на Погребална агенция АМИН?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Централният офис на Погребална агенция АМИН е в гр. Стамболийски. За точна навигация използвайте Google Maps профила на агенцията за офис Стамболийски."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Работи ли агенцията денонощно?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Траурна агенция АМИН работи денонощно, включително събота, неделя и празнични дни. При спешен случай можете да се обадите на +359 87 8907 150."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какви услуги предлага офисът в Стамболийски?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Агенцията съдейства при организация на погребение, кремация, транспорт на покойник, документи, ритуална зала, санитарна подготовка, траурни стоки, венци, кетъринг за помен и паметници."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Обслужвате ли Пловдив и региона?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. От централния офис в Стамболийски се оказва съдействие за Пловдив, Цалапица, Кричим, Огняново и близките населени места."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Може ли екип да дойде на адрес?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "При необходимост може да се организира посещение на посочен от близките адрес. Това се уточнява по телефона според мястото, обстоятелствата и нужната помощ."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://amin90.com/pogrebalna-agenciya-stamboliyski#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://amin90.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Локации",
+          "item": "https://amin90.com/lokacii"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Погребална агенция в Стамболийски",
+          "item": "https://amin90.com/pogrebalna-agenciya-stamboliyski"
+        }
+      ]
+    }
+  ]
+}

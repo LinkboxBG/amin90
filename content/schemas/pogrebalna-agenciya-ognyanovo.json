@@ -1,0 +1,144 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://amin90.com/#localbusiness",
+      "name": "Погребална агенция АМИН",
+      "alternateName": "Траурна агенция АМИН",
+      "url": "https://amin90.com/",
+      "telephone": "+359878907150",
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Огняново"
+        },
+        {
+          "@type": "Place",
+          "name": "Стамболийски"
+        },
+        {
+          "@type": "Place",
+          "name": "Пловдив"
+        },
+        {
+          "@type": "Place",
+          "name": "Цалапица"
+        },
+        {
+          "@type": "Place",
+          "name": "Кричим"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "priceRange": "€€"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://amin90.com/pogrebalna-agenciya-ognyanovo#service",
+      "name": "Погребална агенция за Огняново",
+      "serviceType": "Погребални и траурни услуги",
+      "provider": {
+        "@id": "https://amin90.com/#localbusiness"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Огняново"
+      },
+      "description": "Погребална агенция АМИН предлага съдействие при погребения, кремации, транспорт, документи и траурни услуги за Огняново и близките населени места."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://amin90.com/pogrebalna-agenciya-ognyanovo#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Обслужвате ли Огняново?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Погребална агенция АМИН съдейства за Огняново и близките населени места при организация на погребение, кремация, транспорт, документи и траурни услуги."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какво трябва да направим първо при смъртен случай?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Първо се обадете на денонощния телефон +359 87 8907 150. Ще получите насоки според това къде е настъпила смъртта и какви документи или действия са необходими."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Може ли да помогнете с транспорт и документи?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Агенцията може да съдейства с транспорт на покойник, документи за погребение или кремация и организация на следващите стъпки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Работите ли денонощно?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Траурна агенция АМИН работи денонощно, включително събота, неделя и празнични дни."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Предлагате ли кремация за хора от Огняново?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Агенцията съдейства с организация на кремация, документи и транспорт. Кремацията се извършва в Пловдив като най-близък крематориум."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Предлагате ли траурни стоки и венци?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Предлагат се ковчези, кръстове, некролози, свещи, венци, цветя и други траурни изделия, необходими за ритуала."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://amin90.com/pogrebalna-agenciya-ognyanovo#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://amin90.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Локации",
+          "item": "https://amin90.com/lokacii"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Погребална агенция за Огняново",
+          "item": "https://amin90.com/pogrebalna-agenciya-ognyanovo"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,729 @@
+{
+  "generatedAt": "2026-06-04T01:10:18.376Z",
+  "requiredSlugs": [
+    "homepage",
+    "traurni-uslugi",
+    "pogrebenie",
+    "kremaciya",
+    "transport-na-pokoinik",
+    "denonoshtna-pogrebalna-agenciya",
+    "dokumenti-za-pogrebenie",
+    "ketaring-pomen",
+    "traurni-stoki",
+    "traurni-venci",
+    "pametnitsi",
+    "ceni",
+    "za-nas",
+    "kontakti",
+    "lokacii",
+    "pogrebalna-agenciya-stamboliyski",
+    "pogrebalna-agenciya-plovdiv",
+    "pogrebalna-agenciya-tsalapitsa",
+    "pogrebalna-agenciya-krichim",
+    "pogrebalna-agenciya-ognyanovo"
+  ],
+  "slugsFound": [
+    "homepage",
+    "traurni-uslugi",
+    "pogrebenie",
+    "kremaciya",
+    "transport-na-pokoinik",
+    "denonoshtna-pogrebalna-agenciya",
+    "dokumenti-za-pogrebenie",
+    "ketaring-pomen",
+    "traurni-stoki",
+    "traurni-venci",
+    "pametnitsi",
+    "ceni",
+    "za-nas",
+    "kontakti",
+    "lokacii",
+    "pogrebalna-agenciya-stamboliyski",
+    "pogrebalna-agenciya-plovdiv",
+    "pogrebalna-agenciya-tsalapitsa",
+    "pogrebalna-agenciya-krichim",
+    "pogrebalna-agenciya-ognyanovo"
+  ],
+  "slugsMissing": [],
+  "meta": {
+    "ok": [
+      "homepage",
+      "traurni-uslugi",
+      "pogrebenie",
+      "kremaciya",
+      "transport-na-pokoinik",
+      "denonoshtna-pogrebalna-agenciya",
+      "dokumenti-za-pogrebenie",
+      "ketaring-pomen",
+      "traurni-stoki",
+      "traurni-venci",
+      "pametnitsi",
+      "ceni",
+      "za-nas",
+      "kontakti",
+      "lokacii",
+      "pogrebalna-agenciya-stamboliyski",
+      "pogrebalna-agenciya-plovdiv",
+      "pogrebalna-agenciya-tsalapitsa",
+      "pogrebalna-agenciya-krichim",
+      "pogrebalna-agenciya-ognyanovo"
+    ],
+    "invalid": []
+  },
+  "faq": {
+    "ok": [
+      "homepage",
+      "traurni-uslugi",
+      "pogrebenie",
+      "kremaciya",
+      "transport-na-pokoinik",
+      "denonoshtna-pogrebalna-agenciya",
+      "dokumenti-za-pogrebenie",
+      "ketaring-pomen",
+      "traurni-stoki",
+      "traurni-venci",
+      "pametnitsi",
+      "ceni",
+      "za-nas",
+      "kontakti",
+      "lokacii",
+      "pogrebalna-agenciya-stamboliyski",
+      "pogrebalna-agenciya-plovdiv",
+      "pogrebalna-agenciya-tsalapitsa",
+      "pogrebalna-agenciya-krichim",
+      "pogrebalna-agenciya-ognyanovo"
+    ],
+    "invalid": []
+  },
+  "schema": {
+    "approved": [
+      "homepage",
+      "traurni-uslugi",
+      "pogrebenie",
+      "kremaciya",
+      "transport-na-pokoinik",
+      "denonoshtna-pogrebalna-agenciya",
+      "dokumenti-za-pogrebenie",
+      "ketaring-pomen",
+      "traurni-stoki",
+      "traurni-venci",
+      "pametnitsi",
+      "ceni",
+      "za-nas",
+      "kontakti",
+      "lokacii",
+      "pogrebalna-agenciya-stamboliyski",
+      "pogrebalna-agenciya-plovdiv",
+      "pogrebalna-agenciya-tsalapitsa",
+      "pogrebalna-agenciya-krichim",
+      "pogrebalna-agenciya-ognyanovo"
+    ],
+    "needsReview": [],
+    "invalid": []
+  },
+  "linksNormalized": [
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/dokumenti-za-pogrebenie/",
+      "to": "/dokumenti-za-pogrebenie"
+    },
+    {
+      "from": "/transport-na-pokoinik/",
+      "to": "/transport-na-pokoinik"
+    },
+    {
+      "from": "/traurni-stoki/",
+      "to": "/traurni-stoki"
+    },
+    {
+      "from": "/traurni-venci/",
+      "to": "/traurni-venci"
+    },
+    {
+      "from": "/ketaring-pomen/",
+      "to": "/ketaring-pomen"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/denonoshtna-pogrebalna-agenciya/",
+      "to": "/denonoshtna-pogrebalna-agenciya"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/transport-na-pokoinik/",
+      "to": "/transport-na-pokoinik"
+    },
+    {
+      "from": "/dokumenti-za-pogrebenie/",
+      "to": "/dokumenti-za-pogrebenie"
+    },
+    {
+      "from": "/kremaciya/",
+      "to": "/kremaciya"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/kremaciya/",
+      "to": "/kremaciya"
+    },
+    {
+      "from": "/transport-na-pokoinik/",
+      "to": "/transport-na-pokoinik"
+    },
+    {
+      "from": "/traurni-stoki/",
+      "to": "/traurni-stoki"
+    },
+    {
+      "from": "/traurni-venci/",
+      "to": "/traurni-venci"
+    },
+    {
+      "from": "/pametnitsi/",
+      "to": "/pametnitsi"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/kremaciya/",
+      "to": "/kremaciya"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/transport-na-pokoinik/",
+      "to": "/transport-na-pokoinik"
+    },
+    {
+      "from": "/dokumenti-za-pogrebenie/",
+      "to": "/dokumenti-za-pogrebenie"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/transport-na-pokoinik/",
+      "to": "/transport-na-pokoinik"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/kremaciya/",
+      "to": "/kremaciya"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/dokumenti-za-pogrebenie/",
+      "to": "/dokumenti-za-pogrebenie"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/kremaciya/",
+      "to": "/kremaciya"
+    },
+    {
+      "from": "/transport-na-pokoinik/",
+      "to": "/transport-na-pokoinik"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/traurni-uslugi/",
+      "to": "/traurni-uslugi"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/kremaciya/",
+      "to": "/kremaciya"
+    },
+    {
+      "from": "/transport-na-pokoinik/",
+      "to": "/transport-na-pokoinik"
+    },
+    {
+      "from": "/denonoshtna-pogrebalna-agenciya/",
+      "to": "/denonoshtna-pogrebalna-agenciya"
+    },
+    {
+      "from": "/dokumenti-za-pogrebenie/",
+      "to": "/dokumenti-za-pogrebenie"
+    },
+    {
+      "from": "/ketaring-pomen/",
+      "to": "/ketaring-pomen"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/traurni-stoki/",
+      "to": "/traurni-stoki"
+    },
+    {
+      "from": "/traurni-venci/",
+      "to": "/traurni-venci"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/kremaciya/",
+      "to": "/kremaciya"
+    },
+    {
+      "from": "/pametnitsi/",
+      "to": "/pametnitsi"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/traurni-venci/",
+      "to": "/traurni-venci"
+    },
+    {
+      "from": "/traurni-stoki/",
+      "to": "/traurni-stoki"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/kremaciya/",
+      "to": "/kremaciya"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/pametnitsi/",
+      "to": "/pametnitsi"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/lokacii/",
+      "to": "/lokacii"
+    },
+    {
+      "from": "/ketaring-pomen/",
+      "to": "/ketaring-pomen"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/kremaciya/",
+      "to": "/kremaciya"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/lokacii/",
+      "to": "/lokacii"
+    },
+    {
+      "from": "/pogrebalna-agenciya-stamboliyski/",
+      "to": "/pogrebalna-agenciya-stamboliyski"
+    },
+    {
+      "from": "/pogrebalna-agenciya-plovdiv/",
+      "to": "/pogrebalna-agenciya-plovdiv"
+    },
+    {
+      "from": "/traurni-uslugi/",
+      "to": "/traurni-uslugi"
+    },
+    {
+      "from": "/za-nas/",
+      "to": "/za-nas"
+    },
+    {
+      "from": "/traurni-uslugi/",
+      "to": "/traurni-uslugi"
+    },
+    {
+      "from": "/pametnitsi/",
+      "to": "/pametnitsi"
+    },
+    {
+      "from": "/lokacii/",
+      "to": "/lokacii"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/traurni-uslugi/",
+      "to": "/traurni-uslugi"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/kremaciya/",
+      "to": "/kremaciya"
+    },
+    {
+      "from": "/transport-na-pokoinik/",
+      "to": "/transport-na-pokoinik"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/pametnitsi/",
+      "to": "/pametnitsi"
+    },
+    {
+      "from": "/traurni-stoki/",
+      "to": "/traurni-stoki"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/lokacii/",
+      "to": "/lokacii"
+    },
+    {
+      "from": "/lokacii/",
+      "to": "/lokacii"
+    },
+    {
+      "from": "/pogrebalna-agenciya-stamboliyski/",
+      "to": "/pogrebalna-agenciya-stamboliyski"
+    },
+    {
+      "from": "/pogrebalna-agenciya-plovdiv/",
+      "to": "/pogrebalna-agenciya-plovdiv"
+    },
+    {
+      "from": "/pogrebalna-agenciya-tsalapitsa/",
+      "to": "/pogrebalna-agenciya-tsalapitsa"
+    },
+    {
+      "from": "/pogrebalna-agenciya-krichim/",
+      "to": "/pogrebalna-agenciya-krichim"
+    },
+    {
+      "from": "/pogrebalna-agenciya-ognyanovo/",
+      "to": "/pogrebalna-agenciya-ognyanovo"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/pogrebalna-agenciya-stamboliyski/",
+      "to": "/pogrebalna-agenciya-stamboliyski"
+    },
+    {
+      "from": "/lokacii/",
+      "to": "/lokacii"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/kremaciya/",
+      "to": "/kremaciya"
+    },
+    {
+      "from": "/transport-na-pokoinik/",
+      "to": "/transport-na-pokoinik"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/pogrebalna-agenciya-plovdiv/",
+      "to": "/pogrebalna-agenciya-plovdiv"
+    },
+    {
+      "from": "/lokacii/",
+      "to": "/lokacii"
+    },
+    {
+      "from": "/pogrebalna-agenciya-stamboliyski/",
+      "to": "/pogrebalna-agenciya-stamboliyski"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/kremaciya/",
+      "to": "/kremaciya"
+    },
+    {
+      "from": "/transport-na-pokoinik/",
+      "to": "/transport-na-pokoinik"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/pogrebalna-agenciya-tsalapitsa/",
+      "to": "/pogrebalna-agenciya-tsalapitsa"
+    },
+    {
+      "from": "/lokacii/",
+      "to": "/lokacii"
+    },
+    {
+      "from": "/pogrebalna-agenciya-stamboliyski/",
+      "to": "/pogrebalna-agenciya-stamboliyski"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/pogrebalna-agenciya-krichim/",
+      "to": "/pogrebalna-agenciya-krichim"
+    },
+    {
+      "from": "/lokacii/",
+      "to": "/lokacii"
+    },
+    {
+      "from": "/pogrebalna-agenciya-stamboliyski/",
+      "to": "/pogrebalna-agenciya-stamboliyski"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/transport-na-pokoinik/",
+      "to": "/transport-na-pokoinik"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    },
+    {
+      "from": "/pogrebalna-agenciya-ognyanovo/",
+      "to": "/pogrebalna-agenciya-ognyanovo"
+    },
+    {
+      "from": "/lokacii/",
+      "to": "/lokacii"
+    },
+    {
+      "from": "/pogrebalna-agenciya-stamboliyski/",
+      "to": "/pogrebalna-agenciya-stamboliyski"
+    },
+    {
+      "from": "/pogrebenie/",
+      "to": "/pogrebenie"
+    },
+    {
+      "from": "/ceni/",
+      "to": "/ceni"
+    },
+    {
+      "from": "/kontakti/",
+      "to": "/kontakti"
+    }
+  ],
+  "mappingWarnings": [],
+  "pages": {
+    "homepage": {
+      "slug": "homepage",
+      "route": "/"
+    },
+    "traurni-uslugi": {
+      "slug": "traurni-uslugi",
+      "route": "/traurni-uslugi"
+    },
+    "pogrebenie": {
+      "slug": "pogrebenie",
+      "route": "/pogrebenie"
+    },
+    "kremaciya": {
+      "slug": "kremaciya",
+      "route": "/kremaciya"
+    },
+    "transport-na-pokoinik": {
+      "slug": "transport-na-pokoinik",
+      "route": "/transport-na-pokoinik"
+    },
+    "denonoshtna-pogrebalna-agenciya": {
+      "slug": "denonoshtna-pogrebalna-agenciya",
+      "route": "/denonoshtna-pogrebalna-agenciya"
+    },
+    "dokumenti-za-pogrebenie": {
+      "slug": "dokumenti-za-pogrebenie",
+      "route": "/dokumenti-za-pogrebenie"
+    },
+    "ketaring-pomen": {
+      "slug": "ketaring-pomen",
+      "route": "/ketaring-pomen"
+    },
+    "traurni-stoki": {
+      "slug": "traurni-stoki",
+      "route": "/traurni-stoki"
+    },
+    "traurni-venci": {
+      "slug": "traurni-venci",
+      "route": "/traurni-venci"
+    },
+    "pametnitsi": {
+      "slug": "pametnitsi",
+      "route": "/pametnitsi"
+    },
+    "ceni": {
+      "slug": "ceni",
+      "route": "/ceni"
+    },
+    "za-nas": {
+      "slug": "za-nas",
+      "route": "/za-nas"
+    },
+    "kontakti": {
+      "slug": "kontakti",
+      "route": "/kontakti"
+    },
+    "lokacii": {
+      "slug": "lokacii",
+      "route": "/lokacii"
+    },
+    "pogrebalna-agenciya-stamboliyski": {
+      "slug": "pogrebalna-agenciya-stamboliyski",
+      "route": "/pogrebalna-agenciya-stamboliyski"
+    },
+    "pogrebalna-agenciya-plovdiv": {
+      "slug": "pogrebalna-agenciya-plovdiv",
+      "route": "/pogrebalna-agenciya-plovdiv"
+    },
+    "pogrebalna-agenciya-tsalapitsa": {
+      "slug": "pogrebalna-agenciya-tsalapitsa",
+      "route": "/pogrebalna-agenciya-tsalapitsa"
+    },
+    "pogrebalna-agenciya-krichim": {
+      "slug": "pogrebalna-agenciya-krichim",
+      "route": "/pogrebalna-agenciya-krichim"
+    },
+    "pogrebalna-agenciya-ognyanovo": {
+      "slug": "pogrebalna-agenciya-ognyanovo",
+      "route": "/pogrebalna-agenciya-ognyanovo"
+    }
+  }
+}

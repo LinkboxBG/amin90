@@ -1,0 +1,198 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://amin90.com/ceni#webpage",
+      "url": "https://amin90.com/ceni",
+      "name": "Цени за погребение и кремация | Погребална агенция АМИН",
+      "description": "Ориентировъчни цени за организация на погребение, кремация, транспорт, документи, траурни стоки, венци и паметници от Погребална агенция „АМИН“.",
+      "inLanguage": "bg-BG",
+      "isPartOf": {
+        "@id": "https://amin90.com/#website"
+      },
+      "about": {
+        "@id": "https://amin90.com/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://amin90.com/ceni#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://amin90.com/ceni#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Начало",
+          "item": "https://amin90.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Цени",
+          "item": "https://amin90.com/ceni"
+        }
+      ]
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://amin90.com/ceni#offer-catalog",
+      "name": "Ориентировъчни цени за погребение, кремация и траурни услуги",
+      "url": "https://amin90.com/ceni",
+      "itemListElement": [
+        {
+          "@type": "OfferCatalog",
+          "name": "Организация на погребение",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Организация на погребение",
+              "price": "50",
+              "priceCurrency": "EUR"
+            },
+            {
+              "@type": "Offer",
+              "name": "Полагане и драпиране",
+              "price": "20",
+              "priceCurrency": "EUR"
+            },
+            {
+              "@type": "Offer",
+              "name": "Хладилна камера за 24 часа",
+              "price": "30",
+              "priceCurrency": "EUR"
+            },
+            {
+              "@type": "Offer",
+              "name": "Пълен тоалет",
+              "price": "70",
+              "priceCurrency": "EUR"
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Кремация",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Кремация",
+              "price": "340",
+              "priceCurrency": "EUR"
+            },
+            {
+              "@type": "Offer",
+              "name": "Изграждане на гробница",
+              "price": "360",
+              "priceCurrency": "EUR"
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Транспорт",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Шествие с катафалка",
+              "price": "30",
+              "priceCurrency": "EUR"
+            },
+            {
+              "@type": "Offer",
+              "name": "Извънградско транспортиране",
+              "price": "1",
+              "priceCurrency": "EUR",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "1",
+                "priceCurrency": "EUR",
+                "unitText": "км"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Траурни стоки и венци",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Ковчег",
+              "price": "80",
+              "priceCurrency": "EUR"
+            },
+            {
+              "@type": "Offer",
+              "name": "Кръст с надпис",
+              "price": "25",
+              "priceCurrency": "EUR"
+            },
+            {
+              "@type": "Offer",
+              "name": "Венец от изкуствени цветя",
+              "price": "40",
+              "priceCurrency": "EUR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://amin90.com/ceni#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Колко струва погребение?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Крайната цена зависи от избраните услуги — организация, транспорт, подготовка, документи, ковчег, ритуална зала, венци, кетъринг и други допълнителни дейности. За ориентировъчна оферта се обадете на денонощния телефон."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Колко струва кремация?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ориентировъчната цена за кремация е €340. Към нея може да има допълнителни разходи за транспорт, документи, ритуал, урна, урнополагане или други услуги според случая."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какво включва цената за организация на погребение?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Организацията може да включва първоначална консултация, координация на действията, съдействие с документи, транспорт, подготовка, ритуална зала, свещеник, траурни стоки, венци и кетъринг. Конкретните услуги се уточняват според нуждите на близките."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Има ли допълнителни разходи?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, възможно е да има допълнителни разходи според транспорта, разстоянието, вида ковчег, нужните документи, гробищния парк, избрания ритуал, венците, кетъринга и други желания на семейството."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Може ли да получим индивидуална оферта?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Погребална агенция „АМИН“ може да даде индивидуална оферта след кратък разговор за конкретния случай, населеното място и желаните услуги."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Цените окончателни ли са?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Не. Те са ориентировъчни и могат да се променят според случая, избраните услуги и актуалните условия. Най-точна информация ще получите след разговор с агенцията."
+          }
+        }
+      ]
+    }
+  ]
+}
