@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.amin90.vercel.app" }],
+      "destination": "https://amin90.vercel.app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.amin90.com" }],
+      "destination": "https://amin90.com/:path*",
+      "permanent": true
+    }
+  ]
+}

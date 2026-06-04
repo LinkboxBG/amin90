@@ -84,6 +84,9 @@ vercel --prod
 После:
 
 1. Domains → добавете `amin90.com` и `www.amin90.com`.
+   - Основен (primary) домейн: **`amin90.com`** (без `www`).
+   - `www` се пренасочва автоматично чрез `proxy.ts` + `vercel.json` (301 → без `www`).
+   - За Vercel URL: основен е `amin90.vercel.app`; `www.amin90.vercel.app` също се пренасочва.
 2. Уверете се, че `NEXT_PUBLIC_ENV=production` (маха noindex).
 3. Google Search Console → добавете property и подайте `https://amin90.com/sitemap.xml`.
 4. 301 redirects, ако новите URL се различават от стар сайт.
