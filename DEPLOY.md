@@ -84,12 +84,19 @@ vercel --prod
 После:
 
 1. Domains → добавете `amin90.com` и `www.amin90.com`.
-   - Основен (primary) домейн: **`amin90.com`** (без `www`).
-   - `www` се пренасочва автоматично чрез `proxy.ts` + `vercel.json` (301 → без `www`).
-   - За Vercel URL: основен е `amin90.vercel.app`; `www.amin90.vercel.app` също се пренасочва.
-2. Уверете се, че `NEXT_PUBLIC_ENV=production` (маха noindex).
-3. Google Search Console → добавете property и подайте `https://amin90.com/sitemap.xml`.
-4. 301 redirects, ако новите URL се различават от стар сайт.
+   - **Primary домейн във Vercel:** `amin90.com` (без `www`). Ако primary е `www`, Vercel прави redirect apex→www и влиза в конфликт с `proxy.ts`/`vercel.json` (www→apex).
+   - Nameservers при регистратора: `ns1.vercel-dns.com`, `ns2.vercel-dns.com` (проверка: `vercel domains inspect amin90.com`).
+   - `www` → `amin90.com` чрез `proxy.ts` + `vercel.json`.
+2. Production env във Vercel (задължително за индексиране):
+   - `NEXT_PUBLIC_ENV=production`
+   - `NEXT_PUBLIC_SITE_URL=https://amin90.com`
+   - След промяна: **Redeploy** production.
+3. Проверка след deploy:
+   - `https://amin90.vercel.app/robots.txt` → `Allow: /` и `Sitemap: https://amin90.com/sitemap.xml`
+   - Начална страница → `<meta name="robots" content="index, follow">`, canonical `https://amin90.com`
+   - **Не** трябва да се вижда старият Apache сайт или sitemap от 2019.
+4. Google Search Console → property `https://amin90.com`, sitemap `https://amin90.com/sitemap.xml`.
+5. 301 redirects, ако новите URL се различават от стар сайт.
 
 ## 8. Какво има в сайта (v1)
 
