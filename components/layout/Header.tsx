@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navigation } from "@/content/navigation";
@@ -30,6 +31,15 @@ export function Header() {
     setOpenDropdown(null);
     setDesktopMenu(null);
   }, [pathname]);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [mobileOpen]);
 
   function linkActive(href: string) {
     return hydrated && isActive(pathname, href);
@@ -170,98 +180,109 @@ export function Header() {
         </div>
       </div>
 
-      {/* Мобилно меню (Sheet / full-screen overlay) */}
-      {mobileOpen && (
-        <div className="fixed inset-0 z-[60] lg:hidden" role="dialog" aria-modal="true" aria-label="Меню">
-          <div className="ds flex h-full flex-col bg-navy-800">
-            <div className="container-page flex h-16 items-center justify-between border-b border-gold-500/30">
-              <Logo variant="on-dark" wordmark className="h-9 w-auto" />
-              <button
-                type="button"
-                onClick={() => setMobileOpen(false)}
-                aria-label="Затвори меню"
-                className="inline-flex size-10 items-center justify-center rounded-md text-on-dark"
-              >
-                <CloseIcon className="size-6" />
-              </button>
-            </div>
+      {/* Мобилно меню — portal извън header (backdrop-blur създава containing block за fixed) */}
+      {mobileOpen &&
+        hydrated &&
+        createPortal(
+          <div
+            className="fixed inset-0 z-[100] flex flex-col bg-navy-800 lg:hidden"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Меню"
+          >
+            <div className="ds flex min-h-0 flex-1 flex-col">
+              <div className="container-page flex h-16 shrink-0 items-center justify-between border-b border-gold-500/30">
+                <Logo variant="on-dark" wordmark className="h-9 w-auto" />
+                <button
+                  type="button"
+                  onClick={() => setMobileOpen(false)}
+                  aria-label="Затвори меню"
+                  className="inline-flex size-10 items-center justify-center rounded-md text-on-dark"
+                >
+                  <CloseIcon className="size-6" />
+                </button>
+              </div>
 
-            <nav className="container-page flex-1 overflow-y-auto py-6" aria-label="Мобилна навигация">
-              <ul className="space-y-1">
-                {navigation.map((item) =>
-                  item.children ? (
-                    <li key={item.href}>
-                      <div className="flex items-stretch">
+              <nav
+                className="container-page min-h-0 flex-1 overflow-y-auto py-6"
+                aria-label="Мобилна навигация"
+              >
+                <ul className="space-y-1">
+                  {navigation.map((item) =>
+                    item.children ? (
+                      <li key={item.href}>
+                        <div className="flex items-stretch">
+                          <Link
+                            href={item.href}
+                            onClick={() => setMobileOpen(false)}
+                            className="flex flex-1 items-center rounded-l-md px-3 py-3 text-lg font-semibold text-on-dark"
+                          >
+                            {item.label}
+                          </Link>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setOpenDropdown((v) => (v === item.href ? null : item.href))
+                            }
+                            aria-label={`Подменю: ${item.label}`}
+                            aria-expanded={openDropdown === item.href}
+                            className="inline-flex items-center rounded-r-md px-3 py-3 text-on-dark"
+                          >
+                            <ChevronDownIcon
+                              className={`size-5 transition-transform ${openDropdown === item.href ? "rotate-180" : ""}`}
+                            />
+                          </button>
+                        </div>
+                        {openDropdown === item.href && (
+                          <ul className="mb-2 ml-3 space-y-1 border-l border-gold-500/30 pl-3">
+                            {item.children.map((child) => (
+                              <li key={child.href}>
+                                <Link
+                                  href={child.href}
+                                  onClick={() => setMobileOpen(false)}
+                                  className="block rounded-md px-3 py-2 text-base text-on-dark-muted"
+                                >
+                                  {child.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ) : (
+                      <li key={item.href}>
                         <Link
                           href={item.href}
                           onClick={() => setMobileOpen(false)}
-                          className="flex flex-1 items-center rounded-l-md px-3 py-3 text-lg font-semibold text-on-dark"
+                          className="block rounded-md px-3 py-3 text-lg font-semibold text-on-dark"
                         >
                           {item.label}
                         </Link>
-                        <button
-                          type="button"
-                          onClick={() =>
-                            setOpenDropdown((v) => (v === item.href ? null : item.href))
-                          }
-                          aria-label={`Подменю: ${item.label}`}
-                          aria-expanded={openDropdown === item.href}
-                          className="inline-flex items-center rounded-r-md px-3 py-3 text-on-dark"
-                        >
-                          <ChevronDownIcon
-                            className={`size-5 transition-transform ${openDropdown === item.href ? "rotate-180" : ""}`}
-                          />
-                        </button>
-                      </div>
-                      {openDropdown === item.href && (
-                        <ul className="mb-2 ml-3 space-y-1 border-l border-gold-500/30 pl-3">
-                          {item.children.map((child) => (
-                            <li key={child.href}>
-                              <Link
-                                href={child.href}
-                                onClick={() => setMobileOpen(false)}
-                                className="block rounded-md px-3 py-2 text-base text-on-dark-muted"
-                              >
-                                {child.label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  ) : (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="block rounded-md px-3 py-3 text-lg font-semibold text-on-dark"
-                      >
-                        {item.label}
-                      </Link>
-                    </li>
-                  )
-                )}
-              </ul>
-            </nav>
+                      </li>
+                    )
+                  )}
+                </ul>
+              </nav>
 
-            <div className="container-page border-t border-gold-500/30 py-6">
-              <p className="eyebrow mb-3">На разположение 24/7</p>
-              <div className="flex flex-col gap-2">
-                {site.phonesDisplay.map((p, i) => (
-                  <a
-                    key={p}
-                    href={`tel:${site.phones[i]}`}
-                    className="flex items-center gap-2 text-lg font-semibold text-on-dark"
-                  >
-                    <PhoneIcon className="size-5 text-gold-500" />
-                    {p}
-                  </a>
-                ))}
+              <div className="container-page shrink-0 border-t border-gold-500/30 py-6">
+                <p className="eyebrow mb-3">На разположение 24/7</p>
+                <div className="flex flex-col gap-2">
+                  {site.phonesDisplay.map((p, i) => (
+                    <a
+                      key={p}
+                      href={`tel:${site.phones[i]}`}
+                      className="flex items-center gap-2 text-lg font-semibold text-on-dark"
+                    >
+                      <PhoneIcon className="size-5 text-gold-500" />
+                      {p}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
     </header>
   );
 }

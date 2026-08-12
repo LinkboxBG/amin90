@@ -34,3 +34,5 @@ vercel-deploy.log
 
 # typescript
 *.tsbuildinfo
+
+.vercel

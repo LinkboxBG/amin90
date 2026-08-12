@@ -30,14 +30,17 @@ export const metadata: Metadata = {
     "Денонощна погребална агенция АМИН в гр. Стамболийски. Организация на погребения, кремации, транспорт и паметници в цялата страна.",
   applicationName: site.name,
   authors: [{ name: site.name }],
-  // favicon се генерира автоматично от app/icon.svg (App Router конвенция);
-  // тук добавяме само apple-touch icon.
   icons: {
-    apple: "/icon.svg",
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    shortcut: "/icon.svg",
+    apple: "/apple-icon",
   },
   robots: {
     index: !IS_STAGING,
     follow: !IS_STAGING,
+  },
+  verification: {
+    google: "kuSfEC-u-hF6oPIsgtq0rJyk9UrkypQ0oPMwTNA3O9A",
   },
   openGraph: {
     type: "website",
