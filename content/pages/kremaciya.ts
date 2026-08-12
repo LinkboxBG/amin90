@@ -1,6 +1,6 @@
 import type { MarketingPageContent } from "../types";
 
-export const kremaciya: MarketingPageContent = {
+export const kremaciya: MarketingPageContent =  {
   "slug": "/kremaciya",
   "h1": "Кремация и съдействие при кремиране",
   "metaTitle": "Кремация и цени за кремиране | Погребална агенция АМИН",
@@ -149,32 +149,6 @@ export const kremaciya: MarketingPageContent = {
       "bullets": [],
       "table": null,
       "showPhoneCta": false
-    },
-    {
-      "heading": "Вътрешни линкове за страницата",
-      "paragraphs": [
-        "Препоръчителни вътрешни линкове от тази страница:"
-      ],
-      "bullets": [
-        "Организация на погребение — `/pogrebenie/`",
-        "Транспорт на покойник — `/transport-na-pokoinik/`",
-        "Документи за погребение — `/dokumenti-za-pogrebenie/`",
-        "Цени — `/ceni/`",
-        "Контакти — `/kontakti/`"
-      ],
-      "table": null,
-      "showPhoneCta": false
-    },
-    {
-      "heading": "Финален CTA блок",
-      "paragraphs": [
-        "### Нуждаете се от съдействие при кремация?",
-        "Погребална агенция „АМИН“ работи денонощно и може да ви даде ясни насоки за документи, транспорт, крематориум, организация и последващи действия.",
-        "Обадете се на денонощния телефон: +359 87 8907 150"
-      ],
-      "bullets": [],
-      "table": null,
-      "showPhoneCta": true
     }
   ],
   "faq": [
@@ -231,5 +205,9 @@ export const kremaciya: MarketingPageContent = {
   ],
   "schemaSlug": "kremaciya",
   "schemaStatus": "approved",
-  "pageVariant": "marketing"
+  "pageVariant": "marketing",
+  "finalCta": {
+    "title": "Нуждаете се от съдействие при кремация?",
+    "text": "Погребална агенция „АМИН“ работи денонощно и може да ви даде ясни насоки за документи, транспорт, крематориум, организация и последващи действия."
+  }
 };

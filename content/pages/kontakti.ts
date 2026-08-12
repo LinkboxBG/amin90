@@ -1,6 +1,6 @@
 import type { MarketingPageContent } from "../types";
 
-export const kontakti: MarketingPageContent = {
+export const kontakti: MarketingPageContent =  {
   "slug": "/kontakti",
   "h1": "Контакти с погребална агенция „АМИН“",
   "metaTitle": "Контакти | Погребална агенция АМИН",
@@ -138,35 +138,6 @@ export const kontakti: MarketingPageContent = {
       ],
       "table": null,
       "showPhoneCta": false
-    },
-    {
-      "heading": "Вътрешни линкове за страницата",
-      "paragraphs": [
-        "Препоръчителни вътрешни линкове от тази страница:"
-      ],
-      "bullets": [
-        "Локации и обслужвани райони — `/lokacii/`",
-        "Погребална агенция в Стамболийски — `/pogrebalna-agenciya-stamboliyski/`",
-        "Погребална агенция за Пловдив — `/pogrebalna-agenciya-plovdiv/`",
-        "Траурни услуги — `/traurni-uslugi/`",
-        "Организация на погребение — `/pogrebenie/`",
-        "Кремация — `/kremaciya/`",
-        "Транспорт на покойник — `/transport-na-pokoinik/`",
-        "Цени — `/ceni/`"
-      ],
-      "table": null,
-      "showPhoneCta": false
-    },
-    {
-      "heading": "Финален CTA блок",
-      "paragraphs": [
-        "### Нуждаете се от съдействие?",
-        "Погребална агенция „АМИН“ работи денонощно и може да ви даде конкретни насоки още при първото обаждане.",
-        "Обадете се на денонощния телефон: +359 87 8907 150"
-      ],
-      "bullets": [],
-      "table": null,
-      "showPhoneCta": true
     }
   ],
   "faq": [
@@ -223,5 +194,9 @@ export const kontakti: MarketingPageContent = {
   ],
   "schemaSlug": "kontakti",
   "schemaStatus": "approved",
-  "pageVariant": "location"
+  "pageVariant": "location",
+  "finalCta": {
+    "title": "Нуждаете се от съдействие?",
+    "text": "Погребална агенция „АМИН“ работи денонощно и може да ви даде конкретни насоки още при първото обаждане."
+  }
 };

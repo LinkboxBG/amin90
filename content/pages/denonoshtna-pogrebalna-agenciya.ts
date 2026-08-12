@@ -1,6 +1,6 @@
 import type { MarketingPageContent } from "../types";
 
-export const denonoshtna_pogrebalna_agenciya: MarketingPageContent = {
+export const denonoshtna_pogrebalna_agenciya: MarketingPageContent =  {
   "slug": "/denonoshtna-pogrebalna-agenciya",
   "h1": "Денонощна погребална агенция",
   "metaTitle": "Денонощна погребална агенция | Погребална агенция АМИН",
@@ -124,32 +124,6 @@ export const denonoshtna_pogrebalna_agenciya: MarketingPageContent = {
       "bullets": [],
       "table": null,
       "showPhoneCta": false
-    },
-    {
-      "heading": "Вътрешни линкове за страницата",
-      "paragraphs": [
-        "Препоръчителни вътрешни линкове от тази страница:"
-      ],
-      "bullets": [
-        "Организация на погребение",
-        "Транспорт на покойник",
-        "Документи за погребение",
-        "Кремация",
-        "Цени",
-        "Контакти"
-      ],
-      "table": null,
-      "showPhoneCta": false
-    },
-    {
-      "heading": "Нуждаете се от денонощна погребална агенция?",
-      "paragraphs": [
-        "Погребална агенция „АМИН“ работи 24 часа в денонощието и може да ви даде ясни насоки още при първото обаждане.",
-        "Обадете се на денонощния телефон: +359 87 8907 150"
-      ],
-      "bullets": [],
-      "table": null,
-      "showPhoneCta": true
     }
   ],
   "faq": [
@@ -206,5 +180,9 @@ export const denonoshtna_pogrebalna_agenciya: MarketingPageContent = {
   ],
   "schemaSlug": "denonoshtna-pogrebalna-agenciya",
   "schemaStatus": "approved",
-  "pageVariant": "urgent"
+  "pageVariant": "urgent",
+  "finalCta": {
+    "title": "Нуждаете се от денонощна погребална агенция?",
+    "text": "Погребална агенция „АМИН“ работи 24 часа в денонощието и може да ви даде ясни насоки още при първото обаждане."
+  }
 };

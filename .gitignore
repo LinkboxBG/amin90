@@ -36,3 +36,9 @@ vercel-deploy.log
 *.tsbuildinfo
 
 .vercel
+
+# локални работни материали (не влизат в репото)
+promeni-08-26/
+v2-pages/
+dev-server.cmd
+.claude/

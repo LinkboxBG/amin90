@@ -1,6 +1,6 @@
 import type { MarketingPageContent } from "../types";
 
-export const lokacii: MarketingPageContent = {
+export const lokacii: MarketingPageContent =  {
   "slug": "/lokacii",
   "h1": "Локации и обслужвани райони на погребална агенция „АМИН“",
   "metaTitle": "Локации и обслужвани райони | Погребална агенция АМИН",
@@ -171,36 +171,6 @@ export const lokacii: MarketingPageContent = {
       "bullets": [],
       "table": null,
       "showPhoneCta": true
-    },
-    {
-      "heading": "Вътрешни линкове за страницата",
-      "paragraphs": [
-        "Препоръчителни вътрешни линкове от тази страница:"
-      ],
-      "bullets": [
-        "Централен офис Стамболийски — `/pogrebalna-agenciya-stamboliyski/`",
-        "Погребална агенция за Пловдив — `/pogrebalna-agenciya-plovdiv/`",
-        "Погребална агенция за Цалапица — `/pogrebalna-agenciya-tsalapitsa/`",
-        "Погребална агенция за Кричим — `/pogrebalna-agenciya-krichim/`",
-        "Погребална агенция за Огняново — `/pogrebalna-agenciya-ognyanovo/`",
-        "Траурни услуги — `/traurni-uslugi/`",
-        "Организация на погребение — `/pogrebenie/`",
-        "Кремация — `/kremaciya/`",
-        "Контакти — `/kontakti/`"
-      ],
-      "table": null,
-      "showPhoneCta": false
-    },
-    {
-      "heading": "Финален CTA блок",
-      "paragraphs": [
-        "### Нуждаете се от погребална агенция в Стамболийски, Пловдив или региона?",
-        "Погребална агенция „АМИН“ работи денонощно и оказва съдействие за Стамболийски, Пловдив, Цалапица, Кричим, Огняново и близките населени места.",
-        "Обадете се на денонощния телефон: +359 87 8907 150"
-      ],
-      "bullets": [],
-      "table": null,
-      "showPhoneCta": true
     }
   ],
   "faq": [
@@ -261,5 +231,9 @@ export const lokacii: MarketingPageContent = {
   ],
   "schemaSlug": "lokacii",
   "schemaStatus": "approved",
-  "pageVariant": "location"
+  "pageVariant": "location",
+  "finalCta": {
+    "title": "Нуждаете се от погребална агенция в Стамболийски, Пловдив или региона?",
+    "text": "Погребална агенция „АМИН“ работи денонощно и оказва съдействие за Стамболийски, Пловдив, Цалапица, Кричим, Огняново и близките населени места."
+  }
 };

@@ -1,8 +1,18 @@
 /**
  * Import v2-pages Markdown → content/pages/*.ts, content/schemas/*.json, content/pricing.ts
  * Does NOT modify v2-pages/ (read-only source archive).
+ *
+ * ВНИМАНИЕ (08.2026): НЕ изпълнявай повторно! content/pages/*.ts вече са
+ * редактирани на ръка след импорта (promeni-08-26): scaffolding секциите
+ * („Финален CTA блок", „Вътрешни линкове", дублиран FAQ) са премахнати и
+ * заменени с finalCta, а /traurni-stoki, /ketaring-pomen и новите
+ * /traurni-krastove и /traurni-kovchezi са пренаписани изцяло. Повторен
+ * import ще върне старото съдържание и артефактите.
  */
 import fs from "fs";
+throw new Error(
+  "import-v2-content.mjs е замразен след promeni-08-26 — content/pages/*.ts се редактират на ръка. Виж коментара в началото на файла.",
+);
 import path from "path";
 import { fileURLToPath } from "url";
 

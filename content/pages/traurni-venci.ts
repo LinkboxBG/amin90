@@ -1,6 +1,6 @@
 import type { MarketingPageContent } from "../types";
 
-export const traurni_venci: MarketingPageContent = {
+export const traurni_venci: MarketingPageContent =  {
   "slug": "/traurni-venci",
   "h1": "Траурни венци и цветя за погребение",
   "metaTitle": "Траурни венци и цветя за погребение | АМИН",
@@ -106,32 +106,6 @@ export const traurni_venci: MarketingPageContent = {
       "bullets": [],
       "table": null,
       "showPhoneCta": false
-    },
-    {
-      "heading": "Вътрешни линкове за страницата",
-      "paragraphs": [
-        "Препоръчителни вътрешни линкове от тази страница:"
-      ],
-      "bullets": [
-        "Траурни стоки — `/traurni-stoki/`",
-        "Организация на погребение — `/pogrebenie/`",
-        "Кремация — `/kremaciya/`",
-        "Цени — `/ceni/`",
-        "Контакти — `/kontakti/`"
-      ],
-      "table": null,
-      "showPhoneCta": false
-    },
-    {
-      "heading": "Финален CTA блок",
-      "paragraphs": [
-        "### Нуждаете се от траурен венец или цветя за погребение?",
-        "Погребална агенция „АМИН“ може да ви съдейства с избор, поръчка и доставка на траурни венци и цветя според ритуала и конкретната ситуация.",
-        "Обадете се на денонощния телефон: +359 87 8907 150"
-      ],
-      "bullets": [],
-      "table": null,
-      "showPhoneCta": true
     }
   ],
   "faq": [
@@ -184,5 +158,9 @@ export const traurni_venci: MarketingPageContent = {
   ],
   "schemaSlug": "traurni-venci",
   "schemaStatus": "approved",
-  "pageVariant": "product"
+  "pageVariant": "product",
+  "finalCta": {
+    "title": "Нуждаете се от траурен венец или цветя за погребение?",
+    "text": "Погребална агенция „АМИН“ може да ви съдейства с избор, поръчка и доставка на траурни венци и цветя според ритуала и конкретната ситуация."
+  }
 };

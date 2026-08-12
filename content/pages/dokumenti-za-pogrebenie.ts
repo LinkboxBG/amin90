@@ -1,6 +1,6 @@
 import type { MarketingPageContent } from "../types";
 
-export const dokumenti_za_pogrebenie: MarketingPageContent = {
+export const dokumenti_za_pogrebenie: MarketingPageContent =  {
   "slug": "/dokumenti-za-pogrebenie",
   "h1": "Документи за погребение и смъртен акт",
   "metaTitle": "Документи за погребение и смъртен акт | АМИН",
@@ -146,33 +146,6 @@ export const dokumenti_za_pogrebenie: MarketingPageContent = {
       "bullets": [],
       "table": null,
       "showPhoneCta": false
-    },
-    {
-      "heading": "Вътрешни линкове за страницата",
-      "paragraphs": [
-        "Препоръчителни вътрешни линкове от тази страница:"
-      ],
-      "bullets": [
-        "Организация на погребение — `/pogrebenie/`",
-        "Кремация — `/kremaciya/`",
-        "Транспорт на покойник — `/transport-na-pokoinik/`",
-        "Денонощна погребална агенция — `/denonoshtna-pogrebalna-agenciya/`",
-        "Цени — `/ceni/`",
-        "Контакти — `/kontakti/`"
-      ],
-      "table": null,
-      "showPhoneCta": false
-    },
-    {
-      "heading": "Финален CTA блок",
-      "paragraphs": [
-        "### Имате нужда от съдействие с документи при смъртен случай?",
-        "Погребална агенция „АМИН“ може да ви насочи още при първото обаждане и да съдейства с административните стъпки според конкретната ситуация.",
-        "Обадете се на денонощния телефон: +359 87 8907 150"
-      ],
-      "bullets": [],
-      "table": null,
-      "showPhoneCta": true
     }
   ],
   "faq": [
@@ -229,5 +202,9 @@ export const dokumenti_za_pogrebenie: MarketingPageContent = {
   ],
   "schemaSlug": "dokumenti-za-pogrebenie",
   "schemaStatus": "approved",
-  "pageVariant": "marketing"
+  "pageVariant": "marketing",
+  "finalCta": {
+    "title": "Имате нужда от съдействие с документи при смъртен случай?",
+    "text": "Погребална агенция „АМИН“ може да ви насочи още при първото обаждане и да съдейства с административните стъпки според конкретната ситуация."
+  }
 };
