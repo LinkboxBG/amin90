@@ -78,8 +78,12 @@ export function MarketingPageView({ page }: { page: MarketingPageContent }) {
       <InternalLinks links={page.internalLinks} />
 
       <CTABand
-        title="Денонощен телефон за съдействие"
-        text="Обадете се на +359 87 8907 150 — ще ви насочим спокойно според конкретния случай."
+        title={page.finalCta?.title ?? "Денонощен телефон за съдействие"}
+        text={
+          page.finalCta
+            ? page.finalCta.text
+            : "Обадете се на +359 87 8907 150 — ще ви насочим спокойно според конкретния случай."
+        }
       />
 
       {page.faq.length > 0 && <FAQ items={page.faq} />}

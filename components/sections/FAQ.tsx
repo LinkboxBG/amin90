@@ -14,7 +14,7 @@ export function FAQ({
   title?: string;
   eyebrow?: string;
 }) {
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<number | null>(null);
 
   return (
     <section className="section">
