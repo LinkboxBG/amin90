@@ -12,6 +12,8 @@ export { dokumenti_za_pogrebenie } from "./dokumenti-za-pogrebenie";
 export { ketaring_pomen } from "./ketaring-pomen";
 export { traurni_stoki } from "./traurni-stoki";
 export { traurni_venci } from "./traurni-venci";
+export { traurni_krastove } from "./traurni-krastove";
+export { traurni_kovchezi } from "./traurni-kovchezi";
 export { pametnitsi } from "./pametnitsi";
 export { ceni } from "./ceni";
 export { za_nas } from "./za-nas";

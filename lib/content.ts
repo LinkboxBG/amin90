@@ -9,6 +9,8 @@ import { dokumenti_za_pogrebenie } from "@/content/pages/dokumenti-za-pogrebenie
 import { ketaring_pomen } from "@/content/pages/ketaring-pomen";
 import { traurni_stoki } from "@/content/pages/traurni-stoki";
 import { traurni_venci } from "@/content/pages/traurni-venci";
+import { traurni_krastove } from "@/content/pages/traurni-krastove";
+import { traurni_kovchezi } from "@/content/pages/traurni-kovchezi";
 import { pametnitsi } from "@/content/pages/pametnitsi";
 import { ceni } from "@/content/pages/ceni";
 import { za_nas } from "@/content/pages/za-nas";
@@ -30,6 +32,8 @@ export const marketingPages: MarketingPageContent[] = [
   ketaring_pomen,
   traurni_stoki,
   traurni_venci,
+  traurni_krastove,
+  traurni_kovchezi,
   pametnitsi,
   ceni,
   za_nas,

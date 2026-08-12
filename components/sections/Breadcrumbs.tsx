@@ -20,7 +20,11 @@ export function Breadcrumbs({ page }: { page: BasePageContent }) {
     ].includes(page.slug)
   ) {
     crumbs.push({ label: "Траурни услуги", href: "/traurni-uslugi" });
-  } else if (["/traurni-stoki", "/traurni-venci"].includes(page.slug)) {
+  } else if (
+    ["/traurni-stoki", "/traurni-venci", "/traurni-krastove", "/traurni-kovchezi"].includes(
+      page.slug,
+    )
+  ) {
     crumbs.push({ label: "Траурни стоки", href: "/traurni-stoki" });
   }
 

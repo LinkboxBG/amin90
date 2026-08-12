@@ -8,6 +8,8 @@ import dokumentiSchema from "@/content/schemas/dokumenti-za-pogrebenie.json";
 import ketaringSchema from "@/content/schemas/ketaring-pomen.json";
 import traurniStokiSchema from "@/content/schemas/traurni-stoki.json";
 import traurniVenciSchema from "@/content/schemas/traurni-venci.json";
+import traurniKrastoveSchema from "@/content/schemas/traurni-krastove.json";
+import traurniKovcheziSchema from "@/content/schemas/traurni-kovchezi.json";
 import pametnitsiSchema from "@/content/schemas/pametnitsi.json";
 import ceniSchema from "@/content/schemas/ceni.json";
 import zaNasSchema from "@/content/schemas/za-nas.json";
@@ -30,6 +32,8 @@ const SCHEMA_MAP: Record<string, object> = {
   "ketaring-pomen": ketaringSchema,
   "traurni-stoki": traurniStokiSchema,
   "traurni-venci": traurniVenciSchema,
+  "traurni-krastove": traurniKrastoveSchema,
+  "traurni-kovchezi": traurniKovcheziSchema,
   pametnitsi: pametnitsiSchema,
   ceni: ceniSchema,
   "za-nas": zaNasSchema,

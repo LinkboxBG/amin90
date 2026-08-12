@@ -22,7 +22,7 @@ export const navigation: NavItem[] = [
       { label: "Кетъринг за помен", href: "/ketaring-pomen" },
     ],
   },
-  { label: "Кремация", href: "/kremaciya" },
+  { label: "Организация на погребение", href: "/pogrebenie" },
   { label: "Цени", href: "/ceni" },
   { label: "Паметници", href: "/pametnitsi" },
   {
@@ -31,6 +31,8 @@ export const navigation: NavItem[] = [
     children: [
       { label: "Всички траурни стоки", href: "/traurni-stoki" },
       { label: "Траурни венци", href: "/traurni-venci" },
+      { label: "Кръстове за погребение", href: "/traurni-krastove" },
+      { label: "Ковчези", href: "/traurni-kovchezi" },
     ],
   },
   {
