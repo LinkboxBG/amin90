@@ -61,17 +61,8 @@ export const pageVisuals: Record<string, PageVisualConfig> = {
     ],
   },
 
-  "/traurni-stoki": {
-    before: [
-      {
-        kind: "service",
-        eyebrow: "Ковчези",
-        title: "Налични ковчези и модели",
-        primaryId: "kovcheg-08",
-        supportingIds: ["kovcheg-02", "kovcheg-03", "kovcheg-05", "kovcheg-06", "kovcheg-07"],
-      },
-    ],
-  },
+  // "/traurni-stoki": снимките вече се рендерират в самите секции на страницата
+  // (Ковчези тийзър + Драперии галерия) — вж. content/pages/traurni-stoki.ts.
 
   "/traurni-venci": {
     before: [
@@ -127,16 +118,8 @@ export const pageVisuals: Record<string, PageVisualConfig> = {
     ],
   },
 
-  "/ketaring-pomen": {
-    before: [
-      {
-        kind: "trust",
-        eyebrow: "Помен",
-        title: "Раздавки и кетъринг за помен",
-        imageId: "organizatsiya-pogrebenie-01",
-      },
-    ],
-  },
+  // "/ketaring-pomen": снимките вече се рендерират в интро секцията на
+  // страницата — вж. content/pages/ketaring-pomen.ts.
 
   "/kremaciya": {
     before: [
